@@ -11,9 +11,12 @@
         <img src="http://placehold.it/200x200" class="logo" width="200" height="200" alt="Лого">
       </a>
       <nav class="main-navigation">
-      <input class="search" type="text" placeholder="Поиск по сайту">
+        <form method="GET" action="index.html">
+          <input class="search" type="text" placeholder="Поиск по сайту">
+        </form>
         <ul class="user">
-          <li class="login user"><a href="#">Валентин Петухов</a><a href="#" class="logout">Выйти</a></li>
+          <li class="login user"><a href="#">Валентин Петухов</a></li>
+          <li class="logout"><a href="#">Выйти</a></li>
           <li class="compare"><a href="#">Сравнить</a></li>
           <li class="cart"><a href="#">Корзина</a></li>
         </ul>
@@ -42,15 +45,19 @@
     <main class="hot">
       <section class="nav">
         <b class="category">Моноподы для селфи</b>
-        <nav>
-          <span class="nav-arrow"><a href="#">Главная </a> / <a href="#">Каталог товаров</a> / <a href="#">Моноподы для селфи</a></span>
-        </nav>
+        <ul>
+          <li class="nav-arrow"><a href="#">Главная</a></li>
+          <li class="nav-arrow"><a href="#">Каталог товаров</a></li>
+          <li class="nav-arrow"><a href="#">Моноподы для селфи</a></li>
+        </ul>
       </section>
       <section class="sort">
         <b class="sort-header">Сортировка:</b>
-        <a href="#" class="sort-item selected">По цене</a>
-        <a href="#" class="sort-item">По типу</a>
-        <a href="#" class="sort-item">По популярности</a>
+        <ul>
+          <li class="sort-item selected"><a href="#">По цене</a></li>
+          <li class="sort-item"><a href="#">По типу</a></li>
+          <li class="sort-item"><a href="#">По популярности</a></li>
+        </ul>
         <span class="icon-up-dir"><a href="#">></a></span>
         <span class="icon-down-dir"><a href="#"><</a></span>
       </section>
@@ -61,45 +68,56 @@
         </div>
       </section>
       <section class="items">
-        <div class="item">
-          <img src="http://placehold.it/500x500">
-          <span class="item-name">Любительская селфи-палка</span>
-          <span class="item-price">500 руб.</span>
-        </div>
-        <div class="item">
-          <img src="http://placehold.it/500x500">
-          <span class="item-name">Профессиональная селфи-палка</span>
-          <span class="item-price">1 500 руб.</span>
-        </div>
-        <div class="item">
-          <img src="http://placehold.it/500x500">
-          <span class="item-name">Непотопляемая селфи-палка</span>
-          <span class="item-price">2 500 руб.</span>
-        </div>
-        <div class="item">
-          <img src="http://placehold.it/500x500">
-          <span class="item-new">New</span>
-          <span class="item-name">Сефли-палка &#171;Следуй за мной&#187;</span>
-          <span class="item-price">4 900 руб.</span>
-        </div>
+        <ul>
+          <li class="item">
+            <div>
+              <img src="http://placehold.it/500x500">
+              <span class="item-name">Любительская селфи-палка</span>
+              <span class="item-price">500 руб.</span>
+            </div>
+          </li>
+          <li class="item">
+            <div>
+              <img src="http://placehold.it/500x500">
+              <span class="item-name">Профессиональная селфи-палка</span>
+              <span class="item-price">1 500 руб.</span>
+            </div>
+          </li>
+          <li class="item">
+            <div>
+              <img src="http://placehold.it/500x500">
+              <span class="item-name">Непотопляемая селфи-палка</span>
+              <span class="item-price">2 500 руб.</span>
+            </div>
+          </li>
+          <li class="item">
+            <div>
+              <img src="http://placehold.it/500x500">
+              <span class="item-new">New</span>
+              <span class="item-name">Сефли-палка &#171;Следуй за мной&#187;</span>
+              <span class="item-price">4 900 руб.</span>
+            </div>
+          </li>
+        </ul>
       </section>
       <section class="pages">
-        <span class="previev"><a href="#">Назад</a></span>
-        <nav>
-          <a href="#" class="page current">1</a>
-          <a href="#" class="page">2</a>
-          <a href="#" class="page">3</a>
-        </nav>
-        <span class="next"><a href="#">Вперед</a></span>
+        <ul>
+          <li class="previev"><a href="#">Назад</a></li>
+          <li class="page current"><a href="#">1</a></li>
+          <li class="page"><a href="#">2</a></li>
+          <li class="page"><a href="#">3</a></li>
+          <li class="next"><a href="#">Вперед</a></li>
+        </ul>
       </section>
     </main>
     <footer>
       <h2 class="logo">Device</h2>
       <img src="http://placehold.it/200x200" width="200" height="200" class="footer-logo" alt="Лого">
-      <span class="address">Москва, ул Строителей, 15</span>
+      <address>Москва, ул. Строителей, 15</address>
       <nav class="footer-user">
         <ul>
-          <li class="login user"><a href="#">Валентин Петухов</a><a href="#" class="logout">Выйти</a></li>
+          <li class="login user"><a href="#">Валентин Петухов</a></li>
+          <li class="logout"><a href="#">Выйти</a></li>
           <li class="compare"><a href="#">Сравнить</a></li>
           <li class="cart"><a href="#">Корзина</a></li>
         </ul>

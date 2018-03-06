@@ -11,7 +11,9 @@
         <img src="http://placehold.it/200x200" class="logo" width="200" height="200" alt="Лого">
       </a>
       <nav class="main-navigation">
-      <input class="search" type="text" placeholder="Поиск по сайту">
+        <form method="GET" action="index.html">
+          <input class="search" type="text" placeholder="Поиск по сайту">
+        </form>
         <ul class="user">
           <li class="login"><a href="#">Войти</a></li>
           <li class="compare"><a href="#">Сравнить</a></li>
@@ -50,9 +52,9 @@
           Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
         </p>
         <span class="more-info">Подробнее</span>
-        <input class="slider-buttom" type="radio" checked>
-        <input class="slider-button-empty" type="radio">
-        <input class="slider-button-empty" type="radio">
+        <input class="slider-buttom" name="slider" type="radio" checked>
+        <input class="slider-button-empty" name="slider" type="radio">
+        <input class="slider-button-empty" name="slider" type="radio">
         <table class="more-info-descriptions">
           <tr>
             <td>8,5 м</td> <td>5 кг</td> <td>Карбон</td>
@@ -72,9 +74,9 @@
           Мотивирующие браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
         </p>
         <span class="more-info">Подробнее</span>
-        <input class="slider-buttom-empty" type="radio">
-        <input class="slider-button" type="radio" checked>
-        <input class="slider-button-empty" type="radio">
+        <input class="slider-buttom-empty" name="slider" type="radio">
+        <input class="slider-button" name="slider" type="radio" checked>
+        <input class="slider-button-empty" name="slider" type="radio">
         <table class="more-info-descriptions">
           <tr>
             <td>48 частв</td>
@@ -94,9 +96,9 @@
           Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
         </p>
         <span class="more-info">Подробнее</span>
-        <input class="slider-buttom-empty" type="radio">
-        <input class="slider-button-empty" type="radio">
-        <input class="slider-button" type="radio" checked>
+        <input class="slider-buttom-empty" name="slider" type="radio">
+        <input class="slider-button-empty" name="slider" type="radio">
+        <input class="slider-button" name="slider" type="radio" checked>
         <table class="more-info-descriptions">
           <tr>
             <td>800 м</td> <td>50 м</td>
@@ -107,44 +109,56 @@
         </table>
       </section>
       <section class="popular">
-        <nav class="popular">
-          <a href="#">
-            <div class="popular-item">
-              <img src="http://placehold.it/200x200" width="200" height="200" alt="Виртуальная реальность">
-              <span class="popular-header">Виртуальная реальность</span>
-            </div>
-          </a>
-          <a href="#">
-            <div class="popular-item">
-              <img src="http://placehold.it/200x200" width="200" height="200" alt="Моноподы для селфи">
-              <span class="popular-header">Моноподы для селфи</span>
-            </div>
-          </a>
-          <a href="#">
-            <div class="popular-item">
-              <img src="http://placehold.it/200x200" width="200" height="200" alt="Экшн-камеры">
-              <span class="popular-header">Экшн-камеры</span>
-            </div>
-          </a>
-          <a href="#">
-            <div class="popular-item">
-              <img src="http://placehold.it/200x200" width="200" height="200" alt="Фитнес-браслеты">
-              <span class="popular-header">Фитнес-браслеты</span>
-            </div>
-          </a>
-          <a href="#">
-            <div class="popular-item">
-              <img src="http://placehold.it/200x200" width="200" height="200" alt="Умные часы">
-              <span class="popular-header">Умные часы</span>
-            </div>
-          </a>
-          <a href="#">
-            <div class="popular-item">
-              <img src="http://placehold.it/200x200" width="200" height="200" alt="Квадрокоптеры">
-              <span class="popular-header">Квадрокоптеры</span>
-            </div>
-          </a>
-        </nav>
+        <ul class="popular">
+          <li class="popular-item">
+            <a href="#">
+              <div>
+                <img src="http://placehold.it/200x200" width="200" height="200" alt="Виртуальная реальность">
+                <span class="popular-header">Виртуальная реальность</span>
+              </div>
+            </a>
+          </li>
+          <li class="popular-item">
+            <a href="#">
+              <div>
+                <img src="http://placehold.it/200x200" width="200" height="200" alt="Моноподы для селфи">
+                <span class="popular-header">Моноподы для селфи</span>
+              </div>
+            </a>
+          </li>
+          <li class="popular-item">
+            <a href="#">
+              <div>
+                <img src="http://placehold.it/200x200" width="200" height="200" alt="Экшн-камеры">
+                <span class="popular-header">Экшн-камеры</span>
+              </div>
+            </a>
+          </li>
+          <li class="popular-item">
+            <a href="#">
+              <div>
+                <img src="http://placehold.it/200x200" width="200" height="200" alt="Фитнес-браслеты">
+                <span class="popular-header">Фитнес-браслеты</span>
+              </div>
+            </a>
+          </li>
+          <li class="popular-item">
+            <a href="#">
+              <div>
+                <img src="http://placehold.it/200x200" width="200" height="200" alt="Умные часы">
+                <span class="popular-header">Умные часы</span>
+              </div>
+            </a>
+          </li>
+          <li class="popular-item">
+            <a href="#">
+              <div>
+                <img src="http://placehold.it/200x200" width="200" height="200" alt="Квадрокоптеры">
+                <span class="popular-header">Квадрокоптеры</span>
+              </div>
+            </a>
+          </li>
+        </ul>
       </section>
       <section class="servises">
         <nav class="servises-menu">
@@ -197,7 +211,7 @@
     <footer>
       <h1 class="logo">Device</h1>
       <img src="http://placehold.it/200x200" width="200" height="200" class="footer-logo" alt="Лого">
-      <span class="address">Москва, ул Строителей, 15</span>
+      <address>Москва, ул. Строителей, 15</address>
       <nav class="footer-user">
         <ul>
           <li class="user"><a href="#">Войти</a></li>
