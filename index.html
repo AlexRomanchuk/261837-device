@@ -6,13 +6,14 @@
   </head>
   <body>
     <header class="main-header">
-      <h1 class="main-logo">Device</h1>
+      <h1 class="main-logo visually-hidden">Device</h1>
       <a href="#" class="main-header-logo">
         <img src="img/logo.png" class="logo" width="163" height="36" alt="Лого">
       </a>
       <nav class="main-navigation">
         <form method="GET" action="index.html">
           <input class="search" type="text" placeholder="Поиск по сайту">
+          <button type="submit" class="btn-search" aria-label="Поиск"></button>
         </form>
         <ul class="user">
           <!-- Думаю подключить пиктограммы через CSS -->
@@ -104,9 +105,9 @@
           </li>
         </ul>
         <div class="slider-controls">
-          <input class="slider-buttom" name="slider" type="radio" checked>
-          <input class="slider-button-empty" name="slider" type="radio">
-          <input class="slider-button-empty" name="slider" type="radio">
+          <input class="slider-buttom" name="slider" type="radio" aria-label="Переключить слайды" checked>
+          <input class="slider-button-empty" name="slider" type="radio" aria-label="Переключить слайды">
+          <input class="slider-button-empty" name="slider" type="radio" aria-label="Переключить слайды">
         </div>
       </section>
       <section class="popular">
@@ -173,10 +174,10 @@
       </section>
       <section class="logotypes">
         <ul>
-          <li class="logo"><img src="img/logo-1.jpg" alt=""></li>
-          <li class="logo"><img src="img/logo-2.jpg" alt=""></li>
-          <li class="logo"><img src="img/logo-3.jpg" alt=""></li>
-          <li class="logo"><img src="img/logo-4.jpg" alt=""></li>
+          <li class="logo"><img src="img/logo-1.jpg" alt="DJI"></li>
+          <li class="logo"><img src="img/logo-2.jpg" alt="GoPro"></li>
+          <li class="logo"><img src="img/logo-3.jpg" alt="SPGadget"></li>
+          <li class="logo"><img src="img/logo-4.jpg" alt="Vive"></li>
         </ul>
       </section>
       <section class="info">
@@ -199,7 +200,7 @@
     </main>
     <footer>
       <!-- В SVG для footer в файлах .svg задал fill с цветом #ffc600 -->
-      <h1 class="logo">Device</h1>
+      <h1 class="logo visually-hidden">Device</h1>
       <img src="img/logo-footer.png" width="163" height="36" class="footer-logo" alt="Лого">
       <address>Москва, ул. Строителей, 15</address>
       <nav class="footer-user">
@@ -230,12 +231,20 @@
       </a>
     </footer>
     <section class="map-popup">
-      <img src="img/map.jpg" alt="">
-      <span class="modal-close">x</span>
+      <img src="img/map.jpg" alt="Карта">
+      <button class="modal-close" type="button" aria-label="Закрыть">x</button>
     </section>
     <section class="write-us">
-      <!-- формы еще нет -->
-      <span class="modal-close">x</span>
+      <form method="POST" action="index.html">
+        <label for="name">Ваше имя</label>
+        <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+        <label for="email">Ваш e-mail</label>
+        <input type="email" name="email" id="email" placeholder="mail@example.ru">
+        <label for="message">Текст письма</label>
+        <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
+        <button class="msg-submit" type="submit" aria-label="Отправить">Отправить</button>
+      </form>
+      <button class="modal-close" type="button" aria-label="Закрыть">x</button>
     </section>
   </body>
 </html>

@@ -6,13 +6,14 @@
   </head>
   <body>
     <header class="main-header">
-      <h1 class="main-logo">Device</h1>
+      <h1 class="main-logo visually-hidden">Device</h1>
       <a href="#" class="main-header-logo">
         <img src="img/logo.png" class="logo" width="163" height="36" alt="Лого">
       </a>
       <nav class="main-navigation">
         <form method="GET" action="index.html">
           <input class="search" type="text" placeholder="Поиск по сайту">
+          <button type="submit" class="btn-search" aria-label="Поиск"></button>
         </form>
         <ul class="user">
           <!-- Думаю подключить пиктограммы через CSS -->
@@ -59,14 +60,36 @@
           <li class="sort-item"><a href="#">По типу</a></li>
           <li class="sort-item"><a href="#">По популярности</a></li>
         </ul>
-        <span class="icon-up-dir"><a href="#">></a></span>
-        <span class="icon-down-dir"><a href="#"><</a></span>
+        <span class="icon-up-dir"><a href="#" aria-label="По убыванию">></a></span>
+        <span class="icon-down-dir"><a href="#" aria-label="По возрастанию"><</a></span>
       </section>
       <section class="filter">
         <b class="filter-header">Фильтр:</b>
-        <div class="price">
-          <!-- здесь будет фильтр -->
+        <div class="filter-controls">
+          <b>Стоимость</b>
+          <input type="range" id="price" min="0" max="80000" value="5000">
         </div>
+        <div class="filter-controls">
+          <b>Цвет</b>
+          <label for="black">Черный</label>
+          <input type="chechbox" class="filter-checkbox checked" id="black" checked>
+          <label for="white">Белый</label>
+          <input type="chechbox" class="filter-checkbox" id="white">
+          <label for="blue">Синий</label>
+          <input type="chechbox" class="filter-checkbox checked" id="blue" checked>
+          <label for="red">Красный</label>
+          <input type="chechbox" class="filter-checkbox checked" id="red" checked>
+          <label for="pink">Розовый</label>
+          <input type="chechbox" class="filter-checkbox" id="pink">
+        </div>
+        <div class="filter-controls">
+          <b>Bluetooth</b>
+          <label for="yes">Есть</label>
+          <input type="radio" class="filter-radio checked" id="yes" checked>
+          <label for="no">Нет</label>
+          <input type="radio" class="filter-radio" id="no">
+        </div>
+        <button class="show" type="button" aria-label="Показать">Показать</button>
       </section>
       <section class="items">
         <ul>
@@ -113,7 +136,7 @@
     </main>
     <footer>
       <!-- В SVG для footer в файлах .svg задал fill с цветом #ffc600 -->
-      <h2 class="logo">Device</h2>
+      <h2 class="logo visually-hidden">Device</h2>
       <img src="img/logo-footer.png" width="163" height="36" class="footer-logo" alt="Лого">
       <address>Москва, ул. Строителей, 15</address>
       <nav class="footer-user">
@@ -134,9 +157,9 @@
       </nav>
       <div class="footer-social">
         <ul>
-          <li class="social-button"><a href="#">ФБ</a></li>
-          <li class="social-button"><a href="#" >'=]</a></li>
-          <li class="social-button"><a href="#">Твиттер</a></li>
+          <li class="social-button"><a href="#" aria-label="Facebook">ФБ</a></li>
+          <li class="social-button"><a href="#" aria-label="Instagramm">'=]</a></li>
+          <li class="social-button"><a href="#" aria-label="Twitter">Твиттер</a></li>
         </ul>
       </div>
       <span class="phone">Тел.: +7(495)495 95 95</span>
