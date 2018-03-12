@@ -67,27 +67,47 @@
         <b class="filter-header">Фильтр:</b>
         <div class="filter-controls">
           <b>Стоимость</b>
-          <input type="range" id="price" min="0" max="80000" value="5000">
+          <span class="handle" aria-label="Выбор цены">[]</span>
+          <span class="range-price" aria-label="Ползунок выбора цены">--</span>
+          <input type="range" id="price" min="0" max="8000" value="5000">
         </div>
         <div class="filter-controls">
           <b>Цвет</b>
-          <label for="black">Черный</label>
-          <input type="chechbox" class="filter-checkbox checked" id="black" checked>
-          <label for="white">Белый</label>
-          <input type="chechbox" class="filter-checkbox" id="white">
-          <label for="blue">Синий</label>
-          <input type="chechbox" class="filter-checkbox checked" id="blue" checked>
-          <label for="red">Красный</label>
-          <input type="chechbox" class="filter-checkbox checked" id="red" checked>
-          <label for="pink">Розовый</label>
-          <input type="chechbox" class="filter-checkbox" id="pink">
+          <ul>
+            <li class="color">
+              <input type="checkbox" id="black" name="black" checked>
+              <label for="black" class="filter-checkbox checked">Черный</label>
+            </li>
+            <li class="color">
+              <input type="checkbox" id="white" name="white">
+              <label for="white" class="filter-checkbox">Белый</label>
+            </li>
+            <li class="color">
+              <input type="checkbox" id="blue" name="blue" checked>
+              <label for="blue" class="filter-checkbox checked">Синий</label>
+            </li>
+            <li class="color">
+              <input type="checkbox" id="red" name="red" checked>
+              <label for="red" class="filter-checkbox checked">Красный</label>
+            </li>
+            <li class="color">
+              <input type="checkbox" id="pink" name="pink">
+              <label for="pink" class="filter-checkbox">Розовый</label>
+            </li>
+          </ul>
         </div>
         <div class="filter-controls">
           <b>Bluetooth</b>
-          <label for="yes">Есть</label>
-          <input type="radio" class="filter-radio checked" id="yes" checked>
-          <label for="no">Нет</label>
-          <input type="radio" class="filter-radio" id="no">
+          <ul>
+            <li class="bluetooth">
+              <input type="radio" id="yes" name="yes" checked>
+              <label for="yes" class="filter-radio checked">Есть</label>
+            </li>
+            <li class="bluetooth">
+              <input type="radio" id="no" name="no">
+              <label for="no" class="filter-radio">Нет</label>
+            </li>
+          </ul>
         </div>
         <button class="show" type="button" aria-label="Показать">Показать</button>
       </section>
@@ -98,6 +118,8 @@
               <img src="img/item-1.jpg" alt="">
               <span class="item-name">Любительская селфи-палка</span>
               <span class="item-price">500 руб.</span>
+              <button class="btn-cart visually-hidden" type="button" aria-label="В корзину">В корзину</button>
+              <button class="btn-compare visually-hidden" type="button" aria-label="Сравнить">В сравнение</button>
             </div>
           </li>
           <li class="item">
@@ -105,6 +127,8 @@
               <img src="img/item-2.jpg" alt="">
               <span class="item-name">Профессиональная селфи-палка</span>
               <span class="item-price">1 500 руб.</span>
+              <button class="btn-cart visually-hidden" type="button" aria-label="В корзину">В корзину</button>
+              <button class="btn-compare visually-hidden" type="button" aria-label="Сравнить">В сравнение</button>
             </div>
           </li>
           <li class="item">
@@ -112,6 +136,8 @@
               <img src="img/item-3.jpg" alt="">
               <span class="item-name">Непотопляемая селфи-палка</span>
               <span class="item-price">2 500 руб.</span>
+              <button class="btn-cart visually-hidden" type="button" aria-label="В корзину">В корзину</button>
+              <button class="btn-compare visually-hidden" type="button" aria-label="Сравнить">В сравнение</button>
             </div>
           </li>
           <li class="item">
@@ -120,6 +146,8 @@
               <span class="item-new">New</span>
               <span class="item-name">Сефли-палка &#171;Следуй за мной&#187;</span>
               <span class="item-price">4 900 руб.</span>
+              <button class="btn-cart visually-hidden" type="button" aria-label="В корзину">В корзину</button>
+              <button class="btn-compare visually-hidden" type="button" aria-label="Сравнить">В сравнение</button>
             </div>
           </li>
         </ul>
