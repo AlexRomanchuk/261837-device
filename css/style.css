@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/opensans.woff") format("woff"),
+    url("fonts/opensans.woff2") format("woff2")
+    url("fonts/opensanslight.woff") format("woff"),
+    url("fonts/opensanslight.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("fonts/gilroyextrabold.woff") format("woff"),
+    url("fonts/gilroyextrabold.woff2") format("woff2")
+    url("fonts/gilroylight.woff") format("woff"),
+    url("fonts/gilroylight.woff2") format("woff2");
+}
+header {
+  background-color: #f7e296;
+}
+.user a, .catalog-menu a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+}
+.user a:hover, .catalog-menu a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+.user a:active, .catalog-menu a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+.main-menu {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+.main-menu a {
+  text-decoration: none;
+  color: #000000;
+}
+.main-menu a:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+.main-menu a:active {
+  color: rgba(0, 0, 0, 0.5);
+}
+.user, .catalog-menu {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+}
+.slide-number {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 180px;
+  color: #ffffff;
+}
+.slide-header {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 47px;
+}
+.slide-description {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+}
+.more-info-descriptions td {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+}
+.more-info-descriptions th {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+}
+.more-info {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+.popular-item a {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  color: #000000;
+}
+.popular-item img {
+  background-color: rgba(240, 197, 46, 0.5);
+}
+.popular-item img:hover {
+  background-color: rgba(240, 197, 46, 1);
+}
+.popular-item img:active {
+  opacity: 0.3;
+  background-color: rgba(240, 197, 46, 1);
+}
+.popular-item a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+.servises-description h2 {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 47px;
+}
+.servises-description p {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.info-header {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 47px;
+}
+.traiding{
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+.info p, .contacts p {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.info-more {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+}
+footer {
+  background-color: #464646;
+}
+footer a{
+  text-decoration: none;
+}
+.footer-user {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+}
+.footer-main {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+.footer-main a, .footer-user a{
+  color: #ffffff;
+}
+.footer-user a:hover, .footer-main a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-user a:active, .footer-main a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+address, .phone {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  color: #ffffff;
+}
