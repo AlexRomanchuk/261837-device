@@ -13,8 +13,27 @@
     url("fonts/gilroylight.woff") format("woff"),
     url("fonts/gilroylight.woff2") format("woff2");
 }
+button.btn-device {
+  border: none;
+}
+b, h2 {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+}
 header {
   background-color: #f7e296;
+}
+.main-header-logo img:hover, .logo-footer img:hover {
+  opacity: 0.6;
+}
+.main-header-logo img:active, .logo-footer img:active {
+  opacity: 0.3;
+}
+.search {
+  font-family: "Open Sans", "Arial", sans-serif;
+  background-color: transparent;
+  border: none;
+  color: rgba(0, 0, 0, 0.3);
 }
 .user a, .catalog-menu a {
   text-decoration: none;
@@ -34,17 +53,75 @@ header {
 .main-menu a {
   text-decoration: none;
   color: #000000;
+  text-transform: uppercase;
 }
 .main-menu a:hover {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.6);
 }
 .main-menu a:active {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.3);
 }
 .user, .catalog-menu {
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: normal;
   font-size: 15px;
+}
+.category {
+  font-size: 47px;
+}
+.btn-device {
+  font-family: "Gilroy", "Arial", sans-serif;
+  background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 33%, rgba(240, 197, 46, 1) 33%, rgba(240, 197, 46, 1) 66%, #ffffff 66%);
+  font-size: 18px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  letter-spacing: 5px;
+}
+.btn-device:hover {
+  background-image: none;
+  background-color: rgba(240, 197, 46, 1);
+}
+.btn-device:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+.btn-compare {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+}
+.btn-compare:hover {
+  color: #000000;
+}
+.btn-compare:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+.breadcrumbs {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+}
+.breadcrumbs-arrow a {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+.breadcrumbs-arrow a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+.breadcrumbs-arrow a:active {
+  color: rgba(0, 0, 0, 0.2);
+}
+.filter, .sort {
+  background-color: #efefef;
+}
+.sort-header, .filter-header {
+  font-size: 16px;
 }
 .slide-number {
   font-family: "Gilroy", "Arial", sans-serif;
@@ -53,8 +130,6 @@ header {
   color: #ffffff;
 }
 .slide-header {
-  font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
   font-size: 47px;
 }
 .slide-description {
@@ -72,11 +147,6 @@ header {
   font-weight: normal;
   font-size: 13px;
 }
-.more-info {
-  font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-}
 .popular-item a {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bold;
@@ -84,22 +154,20 @@ header {
   text-decoration: none;
   color: #000000;
 }
-.popular-item img {
+.popular-image {
+  display: inline-block;
   background-color: rgba(240, 197, 46, 0.5);
 }
-.popular-item img:hover {
+.popular-image:hover {
   background-color: rgba(240, 197, 46, 1);
 }
-.popular-item img:active {
+.popular-image img:active {
   opacity: 0.3;
-  background-color: rgba(240, 197, 46, 1);
 }
 .popular-item a:active {
   color: rgba(0, 0, 0, 0.3);
 }
 .servises-description h2 {
-  font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
   font-size: 47px;
 }
 .servises-description p {
@@ -109,11 +177,59 @@ header {
   color: rgba(0, 0, 0, 0.7);
 }
 .info-header {
-  font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
   font-size: 47px;
 }
-.traiding{
+.filter-header, .sort-header {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.filter-header {
+  background-color: #dbdbdb;
+}
+.sort-item a {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: normal;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.3);
+}
+.sort-item a:hover, .sort-item a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+.sort-item a:active, .sort-item.selected a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
+}
+.filter-checkbox, .filter-radio {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+}
+.item-new {
+  text-transform: uppercase;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  display: table-cell;
+  width: 64px;
+  height: 64px; 
+  text-align: center;
+  vertical-align: middle;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  color: rgba(0, 0, 0, 0.2);
+}
+.item-name {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+.item-price {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.traiding {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bold;
   font-size: 16px;
@@ -124,17 +240,59 @@ header {
   font-size: 15px;
   color: rgba(0, 0, 0, 0.7);
 }
-.info-more {
+.servises-menu {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 15px;
+  border-right: 5px solid black;
+}
+.servises-item a {
   color: #000000;
   text-decoration: none;
+  background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 33%, rgba(240, 197, 46, 1) 33%, rgba(240, 197, 46, 1) 66%, #ffffff 66%);
+}
+.servises-item a:hover {
+  color: #000000;
+  text-decoration: none;
+  background-image: none;
+  background-color: rgba(240, 197, 46, 1);
+}
+.servises-item a:active, .servises-item.current a {
+  color: #f7e184;
+  text-decoration: none;
+  background-image: none;
+  background-color: #000000;
+}
+.pages {
+  background-color: #ebebeb;
+}
+.preview a, .next a, .page a {
+  color: rgba(0, 0, 0, 1);
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+}
+.preview a:hover, .next a:hover {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #d9d9d9;
+}
+.preview a:active, .next a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+.page a {
+  color: rgba(0, 0, 0, 0.3);
+}
+.page a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+.page a:active, .page.current a {
+  color: rgba(0, 0, 0, 1);
 }
 footer {
   background-color: #464646;
 }
-footer a{
+footer a {
   text-decoration: none;
 }
 .footer-user {
@@ -146,12 +304,19 @@ footer a{
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bold;
   font-size: 18px;
+  text-transform: uppercase;
 }
-.footer-main a, .footer-user a{
+.footer-main a {
   color: #ffffff;
 }
-.footer-user a:hover, .footer-main a:hover {
+.footer-user a {
   color: rgba(255, 255, 255, 0.6);
+}
+.footer-main a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-user a:hover {
+  color: #ffffff;
 }
 .footer-user a:active, .footer-main a:active {
   color: rgba(255, 255, 255, 0.3);
@@ -162,4 +327,24 @@ address, .phone {
   font-style: normal;
   font-size: 15px;
   color: #ffffff;
+}
+.write-us label {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+}
+.write-us input, .write-us textarea {
+  font-family: "Open Sans", "Arial", sans-serif;
+  border: none;
+  background-color: #f2f2f2;
+}
+.write-us input:hover, .write-us textarea:hover {
+  background-color: #eaeaea;
+}
+.write-us input:focus, .write-us textarea:focus {
+  background-color: #ffffff;
+  border: 3px solid rgba(240, 197, 46, 1);
+}
+.write-us input:invalid {
+  background-color: #f6dada;
 }

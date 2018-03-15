@@ -57,7 +57,7 @@
             <p class="slide-description">
               Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
             </p>
-            <span class="more-info">Подробнее</span>
+            <a href="#" class="btn-device more-info">Подробнее</a>
             <table class="more-info-descriptions">
               <tr>
                 <td>8,5 м</td> <td>5 кг</td> <td>Карбон</td>
@@ -76,7 +76,7 @@
             <p class="slide-description">
               Мотивирующие браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
             </p>
-            <span class="more-info">Подробнее</span>
+            <a href="#" class="btn-device more-info">Подробнее</a>
             <table class="more-info-descriptions">
               <tr>
                 <td>48 часов</td>
@@ -95,7 +95,7 @@
             <p class="slide-description">
               Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
             </p>
-            <span class="more-info">Подробнее</span>
+            <a href="#" class="btn-device more-info">Подробнее</a>
             <table class="more-info-descriptions">
               <tr>
                 <td>800 м</td> <td>50 м</td>
@@ -116,37 +116,49 @@
         <ul class="popular">
           <li class="popular-item">
             <a href="#">
-              <img src="img/popular-1.svg" alt="Виртуальная реальность">
+              <div class="popular-image">
+                <img src="img/popular-1.svg" alt="Виртуальная реальность">
+              </div>
               <span class="popular-header">Виртуальная реальность</span>
             </a>
           </li>
           <li class="popular-item">
             <a href="#">
-              <img src="img/popular-2.svg" alt="Моноподы для селфи">
+              <div class="popular-image">
+                <img src="img/popular-2.svg" alt="Моноподы для селфи">
+              </div>
               <span class="popular-header">Моноподы для селфи</span>
             </a>
           </li>
           <li class="popular-item">
             <a href="#">
-              <img src="img/popular-3.svg" alt="Экшн-камеры">
+              <div class="popular-image">
+                <img src="img/popular-3.svg" alt="Экшн-камеры">
+              </div>
               <span class="popular-header">Экшн-камеры</span>
             </a>
           </li>
           <li class="popular-item">
             <a href="#">
-              <img src="img/popular-4.svg" alt="Фитнес-браслеты">
+              <div class="popular-image">
+                <img src="img/popular-4.svg" alt="Фитнес-браслеты">
+              </div>
               <span class="popular-header">Фитнес-браслеты</span>
             </a>
           </li>
           <li class="popular-item">
             <a href="#">
-              <img src="img/popular-5.svg" alt="Умные часы">
+              <div class="popular-image">
+                <img src="img/popular-5.svg" alt="Умные часы">
+              </div>
               <span class="popular-header">Умные часы</span>
             </a>
           </li>
           <li class="popular-item">
             <a href="#">
-              <img src="img/popular-6.svg" alt="Квадрокоптеры">
+              <div class="popular-image">
+                <img src="img/popular-6.svg" alt="Квадрокоптеры">
+              </div>
               <span class="popular-header">Квадрокоптеры</span>
             </a>
           </li>
@@ -154,9 +166,9 @@
       </section>
       <section class="servises">
         <ul class="servises-menu">
-          <li class="servises_item current"><a href="#">Доставка</a></li>
-          <li class="servises_item"><a href="#">Гарантия</a></li>
-          <li class="servises_item"><a href="#">Кредит</a></li>
+          <li class="servises-item current"><a href="#">Доставка</a></li>
+          <li class="servises-item"><a href="#">Гарантия</a></li>
+          <li class="servises-item"><a href="#">Кредит</a></li>
         </ul>
         <div class="servises-description">
           <h2>Доставка</h2>
@@ -191,19 +203,21 @@
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
-        <a href="#" class="info-more">Подробнее о нас</a>
+        <a href="#" class="btn-device info-more">Подробнее о нас</a>
       </section>
       <section class="contacts">
         <h2 class="info-header">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <div class="map"><img src="img/map.jpg" alt="карта"></div>
-        <a href="#" class="info-more">Напишите нам</a>
+        <a href="#" class="btn-device info-more">Напишите нам</a>
       </section>
     </main>
     <footer>
       <!-- В SVG для footer в файлах .svg задал fill с цветом #ffc600 -->
       <h1 class="logo visually-hidden">Device</h1>
-      <img src="img/logo-footer.png" width="163" height="36" class="footer-logo" alt="Лого">
+      <a href="#" class="logo-footer">
+        <img src="img/logo-footer.png" width="163" height="36" class="footer-logo" alt="Лого">
+      </a>
       <address>Москва, ул. Строителей, 15</address>
       <nav class="footer-user">
         <ul>
@@ -244,7 +258,7 @@
         <input type="email" name="email" id="email" placeholder="mail@example.ru">
         <label for="message">Текст письма</label>
         <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
-        <button class="msg-submit" type="submit" aria-label="Отправить">Отправить</button>
+        <button class="btn-device msg-submit" type="submit" aria-label="Отправить">Отправить</button>
       </form>
       <button class="modal-close" type="button" aria-label="Закрыть">x</button>
     </section>
