@@ -13,6 +13,13 @@
     url("fonts/gilroylight.woff") format("woff"),
     url("fonts/gilroylight.woff2") format("woff2");
 }
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 button.btn-device {
   border: none;
 }
@@ -20,8 +27,19 @@ b, h2 {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bold;
 }
+.main-header-logo .logo {
+  position: relative;
+  top: -20px;
+}
 header {
+  position: absolute;
+  top: 40px;
+  margin-left: 140px;
+  margin-right: 140px;
+  width: 1160px;
   background-color: #f7e296;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 .main-header-logo img:hover, .logo-footer img:hover {
   opacity: 0.6;
@@ -29,11 +47,60 @@ header {
 .main-header-logo img:active, .logo-footer img:active {
   opacity: 0.3;
 }
+.main-navigation {
+  display: flex;
+  flex-direction: row;
+}
+.container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+.user, .dropdown-menu, .main-menu, .search-form {
+  padding: 0px;
+  list-style: none;
+  display: flex;
+}
+.dropdown-menu, .main-menu {
+  margin-top: 55px;
+  margin-bottom: 40px;
+}
+.search-form, .user {
+  margin-top: 55px;
+  margin-bottom: 0;
+}
+.main-menu li {
+  margin-right: 38px;
+}
+.main-menu .contacts {
+  margin-left: auto;
+  margin-right: 0;
+}
+.catalog {
+  margin-right: auto;
+}
+.catalog-menu {
+  display: flex;
+  flex-direction: row;
+}
+.catalog-menu .col-items {
+  list-style: none;
+}
+.catalog-menu .col-items:first-child {
+  padding-left: 0;
+}
+.user .cart {
+  margin-left: 38px;
+}
 .search {
   font-family: "Open Sans", "Arial", sans-serif;
   background-color: transparent;
   border: none;
   color: rgba(0, 0, 0, 0.3);
+}
+.login {
+  margin-right: auto;
 }
 .user a, .catalog-menu a {
   text-decoration: none;
@@ -45,20 +112,20 @@ header {
 .user a:active, .catalog-menu a:active {
   color: rgba(0, 0, 0, 0.3);
 }
-.main-menu {
+.main-menu, .dropdown-menu {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bold;
   font-size: 18px;
 }
-.main-menu a {
+.main-menu a, .dropdown-menu a {
   text-decoration: none;
   color: #000000;
   text-transform: uppercase;
 }
-.main-menu a:hover {
+.main-menu a:hover, .catalog:hover {
   color: rgba(0, 0, 0, 0.6);
 }
-.main-menu a:active {
+.main-menu a:active, .catalog:active {
   color: rgba(0, 0, 0, 0.3);
 }
 .user, .catalog-menu {
