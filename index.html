@@ -18,7 +18,6 @@
           <button type="submit" class="btn-search" aria-label="Поиск"></button>
         </form>
 		<ul class="user">
-          <!-- Думаю подключить пиктограммы через CSS -->
           <li class="login"><a href="#">Войти</a></li>
           <li class="compare"><a href="#">Сравнить</a></li>
           <li class="cart"><a href="#">Корзина</a></li>
@@ -53,90 +52,80 @@
     </header>
     <main>
       <section class="slider full-width">
-        <ul>
-          <li class="slide">
-            <div class="slide-header">
-			  <ul>
-                <li><span class="slide-number">01</span></li>
-                <li><span class="slide-number visually-hidden">02</span></li>
-				<li><span class="slide-number visually-hidden">03</span></li>
+	    <input type="radio" class="visually-hidden" id="slide-1" name="toggle" checked>
+        <input type="radio" class="visually-hidden" id="slide-2" name="toggle">
+        <input type="radio" class="visually-hidden" id="slide-3" name="toggle">
+        <div class="slide">
+          <div class="slide-header">
+            <span class="slide-number" id="slide1">01</span>
+            <span class="slide-number" id="slide2">02</span>
+		    <span class="slide-number" id="slide3">03</span>
+          </div>
+          <div class="slide-wrapper">
+            <div class="slide-image"></div>
+            <div class="container description">
+			  <ul class="descriptions">
+				<li>
+                  <b class="slide-header" id="header1">Делай селфи,<br> как Бен Стиллер!</b>
+                  <p class="slide-description" id="desc1">
+                    Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+                  </p>
+			    </li>
+				<li>
+                  <b class="slide-header" id="header2">Худеем<br> правильно!</b>
+                  <p class="slide-description" id="desc2">
+                    Мотивирующие браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+                  </p>
+			    </li>
+				<li>
+                  <b class="slide-header" id="header3">Порхает как бабочка, жалит как пчела!</b>
+                  <p class="slide-description" id="desc3">
+                    Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+                  </p>
+			    </li>
+		      </ul>
+			  <div class="controls-wrapper">
+                <a href="#" class="btn-device more-info">Подробнее</a>
+				<div class="slider-radio">
+				  <label for="slide-1"></label>
+                  <label for="slide-2"></label>
+                  <label for="slide-3"></label>
+			    </div>
+		      </div>
+			  <ul class="mores">
+				<li>
+                  <table class="more-info-descriptions" id="table1">
+                    <tr>
+                      <td>8,5 м</td> <td>5 кг</td> <td>Карбон</td>
+                    </tr>
+                    <tr>
+                      <th>Длина палки</th> <th>Вес палки</th> <th>Материал</th>
+                    </tr>
+                  </table>
+				</li>
+				<li>
+                  <table class="more-info-descriptions" id="table2">
+                    <tr>
+                      <td>48 часов</td>
+                    </tr>
+                    <tr>
+                      <th>Без подзарядки</th>
+                    </tr>
+                  </table>
+				</li>
+				<li>
+                  <table class="more-info-descriptions" id="table3">
+                    <tr>
+                      <td>800 м</td> <td>50 м</td>
+                    </tr>
+                    <tr>
+                      <th>Дальность полета</th> <th>Радиус поражения</th>
+                    </tr>
+                  </table>
+				</li>
 			  </ul>
             </div>
-            <div class="slide-wrapper">
-              <div class="slide-image">
-			    <ul>
-                  <li><img src="img/slider-1.png" width="384" height="486" alt="Селфи"></li>
-				  <li class="visually-hidden"><img src="img/slider-2.png" width="384" height="486" alt="Браслет"></li>
-				  <li class="visually-hidden"><img src="img/slider-3.png" width="384" height="486" alt="Дрон"></li>
-				</ul>
-              </div>
-              <div class="container description">
-			    <ul class="descriptions">
-				  <li>
-                    <b class="slide-header">Делай селфи,<br> как Бен Стиллер!</b>
-                    <p class="slide-description">
-                      Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-                    </p>
-			      </li>
-				  <li class="visually-hidden">
-                    <b class="slide-header">Худеем<br> правильно!</b>
-                    <p class="slide-description">
-                      Мотивирующие браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
-                    </p>
-			      </li>
-				  <li class="visually-hidden">
-                    <b class="slide-header">Порхает как бабочка, жалит как пчела!</b>
-                    <p class="slide-description">
-                      Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
-                    </p>
-			      </li>
-				</ul>
-				<div class="controls-wrapper">
-                  <a href="#" class="btn-device more-info">Подробнее</a>
-				  <label for="product-1">1</label>
-                  <label for="product-2">2</label>
-                  <label for="product-3">3</label>
-				</div>
-				<ul class="mores">
-				  <li>
-                    <table class="more-info-descriptions">
-                      <tr>
-                        <td>8,5 м</td> <td>5 кг</td> <td>Карбон</td>
-                      </tr>
-                      <tr>
-                        <th>Длина палки</th> <th>Вес палки</th> <th>Материал</th>
-                      </tr>
-                    </table>
-				  </li>
-				  <li>
-                    <table class="more-info-descriptions visually-hidden">
-                      <tr>
-                        <td>48 часов</td>
-                      </tr>
-                      <tr>
-                        <th>Без подзарядки</th>
-                      </tr>
-                    </table>
-				  </li>
-				  <li>
-                    <table class="more-info-descriptions visually-hidden">
-                      <tr>
-                        <td>800 м</td> <td>50 м</td>
-                      </tr>
-                      <tr>
-                        <th>Дальность полета</th> <th>Радиус поражения</th>
-                      </tr>
-                    </table>
-				  </li>
-				</ul>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <div class="slider-controls">
-          <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-          <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-          <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+          </div>
         </div>
       </section>
       <section class="popular full-width">
@@ -257,9 +246,16 @@
           <a href="#" class="logo-footer">
             <img src="img/logo-footer.png" width="163" height="36" class="footer-logo" alt="Лого">
           </a>
-          <address>г. Москва, ул. Строителей, 15</address>
+		  <nav class="footer-user">
+            <ul>
+              <li class="login"><a href="#">Войти</a></li>
+              <li class="compare"><a href="#">Сравнить</a></li>
+              <li class="cart"><a href="#">Корзина</a></li>
+            </ul>
+          </nav>
         </div>
         <div class="footer-container main">
+		  <address>г. Москва, ул. Строителей, 15</address>
           <nav class="footer-main">
             <ul>
               <li class="nav-item"><a href="#">Доставка</a></li>
@@ -267,6 +263,9 @@
               <li class="nav-item"><a href="#">Контакты</a></li>
             </ul>
           </nav>
+		  <span class="phone">Тел.: +7 (495) 495 95 95</span>
+        </div>
+        <div class="footer-container">
           <div class="footer-social">
             <ul>
               <li class="social-button"><a href="#" aria-label="Facebook">
@@ -280,17 +279,6 @@
 			  </a></li>
             </ul>
           </div>
-        </div>
-        <div class="footer-container">
-          <nav class="footer-user">
-            <ul>
-              <!-- Думаю подключить пиктограммы через CSS -->
-              <li class="login"><a href="#">Войти</a></li>
-              <li class="compare"><a href="#">Сравнить</a></li>
-              <li class="cart"><a href="#">Корзина</a></li>
-            </ul>
-          </nav>
-          <span class="phone">Тел.: +7 (495) 495 95 95</span>
           <a href="https://htmlacademy.ru/intensive/htmlcss" class="logo-html">
             <img src="img/logo-html.svg" alt="">
           </a>
