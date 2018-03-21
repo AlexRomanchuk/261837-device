@@ -7,35 +7,35 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header full-width">
       <h1 class="main-logo visually-hidden">Device</h1>
       <a href="#" class="main-header-logo">
         <img src="img/logo.png" class="logo" width="163" height="36" alt="Лого">
       </a>
+       <div class="menu-container">
+        <form class="search-form" method="GET" action="index.html">
+          <input class="search" type="text" placeholder="Поиск по сайту">
+          <button type="submit" class="btn-search" aria-label="Поиск"></button>
+        </form>
+		<ul class="user">
+          <!-- Думаю подключить пиктограммы через CSS -->
+		  <li class="login"><a href="#">Владимир Петухов<a/></li>
+          <li class="login"><a href="#">Выйти</a></li>
+          <li class="compare"><a href="#">Сравнить</a></li>
+          <li class="cart"><a href="#">Корзина</a></li>
+        </ul>
+      </div>
       <nav class="main-navigation">
-        <div class="container">
-          <form class="search-form" method="GET" action="index.html">
-            <input class="search" type="text" placeholder="Поиск по сайту">
-            <button type="submit" class="btn-search" aria-label="Поиск"></button>
-          </form>
-          <ul class="dropdown-menu">
-            <li class="catalog"><a href="#">Каталог товаров</a></li>
-          </ul>
-        </div>
-        <div class="container">
-          <ul class="user">
-            <!-- Думаю подключить пиктограммы через CSS -->
-            <li class="login"><a href="#">Владимир Петухов</a></li>
-            <li class="logout"><a href="#">Выйти</a></li>
-            <li class="compare"><a href="#">Сравнить</a></li>
-            <li class="cart"><a href="#">Корзина</a></li>
-          </ul>
-          <ul class="main-menu">
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Гарантия</a></li>
-            <li class="contacts"><a href="#">Контакты</a></li>
-          </ul>
-        </div>
+        <ul class="main-menu">
+		  <li class="catalog"><a href="#">Каталог товаров</a></li>
+		  <li class="right-wrapper">
+		    <ul>
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Гарантия</a></li>
+              <li class="contacts"><a href="#">Контакты</a></li>
+			</ul>
+	      </li>
+        </ul>
       </nav>
       <nav class="catalog-menu visually-hidden">
         <ul class="col-items">
@@ -60,7 +60,7 @@
         </ul>
       </div>
     </header>
-    <main class="main-catalog">
+    <main>
       <section class="sort">
         <div class="filter-header">
           <b>Фильтр:</b>
@@ -181,7 +181,7 @@
       </div>
     </main>
     <footer>
-      <div class="wrapper">
+      <div class="footer-wrapper full-width">
         <div class="footer-container">
           <!-- В SVG для footer в файлах .svg задал fill с цветом #ffc600 -->
           <h1 class="logo visually-hidden">Device</h1>
@@ -200,9 +200,15 @@
           </nav>
           <div class="footer-social">
             <ul>
-              <li class="social-button"><a href="#">ФБ</a></li>
-              <li class="social-button"><a href="#">'=]</a></li>
-              <li class="social-button"><a href="#">Твиттер</a></li>
+              <li class="social-button"><a href="#" aria-label="Facebook">
+			    <img src="img/fb.png">
+			  </a></li>
+              <li class="social-button"><a href="#" aria-label="Instagramm">
+			    <img src="img/instagramm.png">
+			  </a></li>
+              <li class="social-button"><a href="#" aria-label="Twitter">
+			    <img src="img/twitter.png">
+			  </a></li>
             </ul>
           </div>
         </div>
