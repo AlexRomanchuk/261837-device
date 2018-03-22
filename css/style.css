@@ -23,13 +23,10 @@ body {
   height: 1px;
   margin: -1px;
 }
-.hidden {
-  display: none !important;	
-}
 .full-width {
- width: 100%;
- max-width: 1160px;
- margin: 0 auto;
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
 }
 button.btn-device {
   border: none;
@@ -234,9 +231,24 @@ b.slide-header, .slide-description, .more-info, .more-info-descriptions {
   border: none;
   color: rgba(0, 0, 0, 0.3);
 }
+.account {
+  margin-right: auto;
+}
+.account ul {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
 .login {
   margin-left: 20px;
   margin-right: auto;
+}
+.account .login {
+  margin-right: 20px;
+}
+.user .logout {
+  color: rgba(0, 0, 0, 0.3);
 }
 .user a, .catalog-menu a {
   text-decoration: none;
@@ -343,12 +355,11 @@ a.btn-device {
 .main-wrapper {
   display: flex; 
   flex-direction: row;
-}
-.filter, .sort {
-  background-color: #efefef;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 0px, rgba(0, 0, 0, 0.08) 70px, #ffffff 70px);
 }
 .filter {
   width: 469px;
+  background-color: rgba(0, 0, 0, 0.08);
 }
 .sort {
   display: flex;
@@ -380,13 +391,11 @@ a.btn-device {
 }
 .filter-header {
   width: 469px;
-  background-color: #dbdbdb;
 }
 .filter-header b {
   margin-left: 200px;
 }
 div.sort {
-  width: 60%;
   display: flex;
   flex-direction: row;
 }
@@ -590,20 +599,17 @@ ul.popular {
   line-height: 1.5;
 }
 .servises {
-  position: relative;
   display: flex;
   flex-direction: row;
-  margin-top: 120px;
-  width: 100%;
-  min-height: 290px;
-  background-color: #e5e5e5;
+  margin-top: 20px;
+  min-height: 390px;
+  background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #e5e5e5 25%);
   justify-content: space-around;
 }
 .servises-wrapper {
+  height: 70%;
   display: flex;
   flex-direction: row;
-  position: absolute;
-  top: -95px;
 }
 .servises-description {
   display: flex;
@@ -644,6 +650,24 @@ ul.popular {
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   color: rgba(0, 0, 0, 0.2);
+}
+.image {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.image img {
+  position: relative;
+  z-index: 1;
+}
+.image .btn-cart, .image .btn-compare {
+  display: none;
+  position: absolute;
+  z-index: 2;
+}
+/*реализация появления всплывающих кнопок?*/
+.image img:hover {
+  opacity: 0.3;
 }
 .item-name {
   font-family: "Gilroy", "Arial", sans-serif;
@@ -828,7 +852,7 @@ footer a {
   justify-content: space-between;
 }
 .footer-container.main {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .footer-user ul, .footer-social ul, .footer-main ul {
   justify-content: center;
@@ -848,6 +872,18 @@ footer a {
 }
 .footer-user .login {
   margin-right: 0;
+}
+.footer-account {
+  margin-right: 25px;
+}
+.footer-account ul {
+  margin: 0;
+}
+.footer-account .login {
+  margin-right: 20px;
+}
+.footer-account .logout {
+  color: rgba(255, 255, 255, 0.3);
 }
 .footer-user .compare::before {
   content: "";
@@ -876,8 +912,11 @@ footer a {
   background-image: url("../img/cart-footer.svg");
   background-repeat: no-repeat;
 }
-.footer-main {
-  width: 500px;
+.footer-main .nav-item {
+  margin-right: 32px;
+}
+.footer-main .nav-item:last-child {
+  margin-right: 0px;
 }
 .footer-main ul {
   list-style: none;
@@ -918,6 +957,9 @@ address, .phone {
 address {
   letter-spacing: -0.02em;
 }
+.phone {
+  margin-left: 30px;
+}
 .logo-html {
   margin-top: 65px;
 }
@@ -935,8 +977,8 @@ address {
 }
 .social-button {
   display: flex;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .write-us {
   display: flex;

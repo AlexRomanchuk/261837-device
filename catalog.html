@@ -17,23 +17,27 @@
           <input class="search" type="text" placeholder="Поиск по сайту">
           <button type="submit" class="btn-search" aria-label="Поиск"></button>
         </form>
-		<ul class="user">
-		  <li class="login"><a href="#">Владимир Петухов<a/></li>
-          <li class="login"><a href="#">Выйти</a></li>
+		    <ul class="user">
+		      <li class="account">
+            <ul>
+              <li class="login"><a href="#">Владимир Петухов</a></li>
+              <li class="logout"><a href="#" class="logout">Выйти</a></li>
+            </ul>
+          </li>
           <li class="compare"><a href="#">Сравнить</a></li>
           <li class="cart"><a href="#">Корзина</a></li>
         </ul>
       </div>
       <nav class="main-navigation">
         <ul class="main-menu">
-		  <li class="catalog"><a href="#">Каталог товаров</a></li>
-		  <li class="right-wrapper">
-		    <ul>
+		      <li class="catalog"><a href="#">Каталог товаров</a></li>
+		      <li class="right-wrapper">
+		        <ul>
               <li><a href="#">Доставка</a></li>
               <li><a href="#">Гарантия</a></li>
               <li class="contacts"><a href="#">Контакты</a></li>
-			</ul>
-	      </li>
+			      </ul>
+	        </li>
         </ul>
       </nav>
       <nav class="catalog-menu visually-hidden">
@@ -60,23 +64,11 @@
       </div>
     </header>
     <main>
-      <section class="sort">
-        <div class="filter-header">
-          <b>Фильтр:</b>
-        </div>
-        <div class="sort">
-        <b class="sort-header">Сортировка:</b>
-          <ul class="sorts">
-            <li class="sort-item selected"><a href="#">По цене</a></li>
-            <li class="sort-item"><a href="#">По типу</a></li>
-            <li class="sort-item"><a href="#">По популярности</a></li>
-            <li class="icon-dir up"><a href="#" aria-label="По убыванию">></a></li>
-            <li class="icon-dir down"><a href="#" aria-label="По возрастанию"><</a></li>
-          </ul>
-        </div>
-      </section>
       <div class="main-wrapper">
         <section class="filter">
+          <div class="filter-header">
+            <b>Фильтр:</b>
+          </div>
           <div class="filter-wrapper">
             <div class="filter-controls">
               <b>Стоимость</b>
@@ -126,43 +118,61 @@
           </div>
         </section>
         <section class="items">
+          <div class="sort">
+            <b class="sort-header">Сортировка:</b>
+            <ul class="sorts">
+              <li class="sort-item selected"><a href="#">По цене</a></li>
+              <li class="sort-item"><a href="#">По типу</a></li>
+              <li class="sort-item"><a href="#">По популярности</a></li>
+              <li class="icon-dir up"><a href="#" aria-label="По убыванию">></a></li>
+              <li class="icon-dir down"><a href="#" aria-label="По возрастанию"><</a></li>
+            </ul>
+          </div>
           <ul class="catalog-items">
             <li class="item">
-              <img src="img/item-1.jpg" alt="">
+              <div class="image">
+                <img src="img/item-1.jpg" alt="">
+                <a href="#" class="btn-device btn-cart" aria-label="В корзину">В корзину</a>
+                <a href="#" class="btn-compare" aria-label="Сравнить">Добавить к сравнению</a>
+              </div>
               <div class="item-description">
                 <span class="item-name">Любительская селфи-палка</span>
                 <span class="item-price">500 руб.</span>
               </div>
-              <a href="#" class="btn-device btn-cart visually-hidden" aria-label="В корзину">В корзину</a>
-              <a href="#" class="btn-compare visually-hidden" aria-label="Сравнить">Добавить к сравнению</a>
             </li>
             <li class="item">
-              <img src="img/item-2.jpg" alt="">
+              <div class="image">
+                <img src="img/item-2.jpg" alt="">
+                <a href="#" class="btn-device btn-cart" aria-label="В корзину">В корзину</a>
+                <a href="#" class="btn-compare" aria-label="Сравнить">Добавить к сравнению</a>
+              </div>
               <div class="item-description">
                 <span class="item-name">Профессиональная селфи-палка</span>
                 <span class="item-price">1 500 руб.</span>
               </div>
-              <a href="#" class="btn-device btn-cart visually-hidden" aria-label="В корзину">В корзину</a>
-              <a href="#" class="btn-compare visually-hidden" aria-label="Сравнить">Добавить к сравнению</a>
             </li>
             <li class="item">
-              <img src="img/item-3.jpg" alt="">
+              <div class="image">
+                <img src="img/item-3.jpg" alt="">
+                <a href="#" class="btn-device btn-cart" aria-label="В корзину">В корзину</a>
+                <a href="#" class="btn-compare" aria-label="Сравнить">Добавить к сравнению</a>
+              </div>
               <div class="item-description">
                 <span class="item-name">Непотопляемая селфи-палка</span>
                 <span class="item-price">2 500 руб.</span>
               </div>
-              <a href="#" class="btn-device btn-cart visually-hidden" aria-label="В корзину">В корзину</a>
-              <a href="#" class="btn-compare visually-hidden" aria-label="Сравнить">Добавить к сравнению</a>
             </li>
             <li class="item">
-              <img src="img/item-4.jpg" alt="">
+              <div class="image">
+                <img src="img/item-4.jpg" alt="">
+                <a href="#" class="btn-device btn-cart" aria-label="В корзину">В корзину</a>
+                <a href="#" class="btn-compare" aria-label="Сравнить">Добавить к сравнению</a>
+              </div>
               <div class="item-new">New</div>
               <div class="item-description">
                 <span class="item-name">Сефли-палка &#171;Следуй за мной&#187;</span>
                 <span class="item-price">4 900 руб.</span>
               </div>
-              <a href="#" class="btn-device btn-cart visually-hidden" aria-label="В корзину">В корзину</a>
-              <a href="#" class="btn-compare visually-hidden" aria-label="Сравнить">Добавить к сравнению</a>
             </li>
           </ul>
           <ul class="bar-pages">
@@ -187,17 +197,21 @@
           <a href="#" class="logo-footer">
             <img src="img/logo-footer.png" width="163" height="36" class="footer-logo" alt="Лого">
           </a>
-		  <nav class="footer-user">
+		      <nav class="footer-user">
             <ul>
-              <li class="login"><a href="#">Владимир Петухов</a></li>
-              <li class="login"><a href="#">Выйти</a></li>
+              <li class="footer-account">
+                <ul>
+                  <li class="login"><a href="#">Владимир Петухов</a></li>
+                  <li class="logout"><a href="#" class="logout">Выйти</a></li>
+                </ul>
+              </li>
               <li class="compare"><a href="#">Сравнить</a></li>
               <li class="cart"><a href="#">Корзина</a></li>
             </ul>
           </nav>
         </div>
         <div class="footer-container main">
-		  <address>г. Москва, ул. Строителей, 15</address>
+		      <address>г. Москва, ул. Строителей, 15</address>
           <nav class="footer-main">
             <ul>
               <li class="nav-item"><a href="#">Доставка</a></li>
@@ -205,20 +219,26 @@
               <li class="nav-item"><a href="#">Контакты</a></li>
             </ul>
           </nav>
-		  <span class="phone">Тел.: +7 (495) 495 95 95</span>
+		      <span class="phone">Тел.: +7 (495) 495 95 95</span>
         </div>
         <div class="footer-container">
           <div class="footer-social">
             <ul>
-              <li class="social-button"><a href="#" aria-label="Facebook">
-			    <img src="img/fb.png">
-			  </a></li>
-              <li class="social-button"><a href="#" aria-label="Instagramm">
-			    <img src="img/instagramm.png">
-			  </a></li>
-              <li class="social-button"><a href="#" aria-label="Twitter">
-			    <img src="img/twitter.png">
-			  </a></li>
+              <li class="social-button">
+                <a href="#" aria-label="Facebook">
+			            <img src="img/fb.png">
+                </a>
+              </li>
+              <li class="social-button">
+                <a href="#" aria-label="Instagramm">
+			            <img src="img/instagramm.png">
+			          </a>
+              </li>
+              <li class="social-button">
+                <a href="#" aria-label="Twitter">
+			            <img src="img/twitter.png">
+			          </a>
+              </li>
             </ul>
           </div>
           <a href="https://htmlacademy.ru/intensive/htmlcss" class="logo-html">
