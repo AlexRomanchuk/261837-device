@@ -182,34 +182,39 @@
       </section>
       <section class="servises">
         <div class="servises-wrapper full-width">
+          <input type="radio" class="visually-hidden" id="servise-1" name="servises" checked>
+          <input type="radio" class="visually-hidden" id="servise-2" name="servises">
+          <input type="radio" class="visually-hidden" id="servise-3" name="servises">
           <ul class="servises-menu">
-          <li class="servises-item"><a href="#" class="current">Доставка</a></li>
-          <li class="servises-item"><a href="#">Гарантия</a></li>
-          <li class="servises-item"><a href="#">Кредит</a></li>
+            <li class="servises-item"><label for="servise-1">Доставка</label></li>
+            <li class="servises-item"><label for="servise-2">Гарантия</label></li>
+            <li class="servises-item"><label for="servise-3">Кредит</label></li>
           </ul>
           <div class="servises-description">
             <div class="wrapper">
-              <h2>Доставка</h2>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              <ul>
+                <li id="servises-head1"><h2>Доставка</h2></li>
+                <li id="servises-head2"><h2>Гарантия</h2></li>
+                <li id="servises-head3"><h2>Кредит</h2></li>
+              </ul>
+              <ul>
+                <li id="servises-desc1">
+                  <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                </li>
+                <li id="servises-desc2">
+                  <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+                </li>
+                <li id="servises-desc3">
+                  <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+                </li>
+              </ul>
             </div>
-            <img src="img/delivery.svg" class="servises-image" alt="Доставка">
+            <img src="img/delivery.svg" class="servises-image"  id="servises-img1" alt="Доставка">
+            <img src="img/warranty.svg" class="servises-image"  id="servises-img2" alt="Гарантия">
+            <img src="img/credit.svg" class="servises-image"  id="servises-img3" alt="Кредит">
           </div>
         </div>
       </section>
-      <div class="servises-description visually-hidden">
-        <div class="wrapper">
-          <h2>Гарантия</h2>
-          <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-        </div>
-        <img src="img/warranty.svg" class="servises-image" alt="Гарантия">
-      </div>
-      <div class="servises-description visually-hidden">
-        <div class="wrapper">
-          <h2>Кредит</h2>
-          <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-        </div>
-        <img src="img/credit.svg" class="servises-image" alt="Кредит">
-      </div>
       <section class="logotypes full-width">
         <ul>
           <li class="logo"><img src="img/logo-1.jpg" alt="DJI"></li>
