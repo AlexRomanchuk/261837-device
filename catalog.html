@@ -14,8 +14,9 @@
       </a>
        <div class="menu-container">
         <form class="search-form" method="GET" action="index.html">
-          <input class="search" type="text" placeholder="Поиск по сайту">
-          <button type="submit" class="btn-search" aria-label="Поиск"></button>
+          <input class="search" type="text">
+          <button type="submit" class="btn-search" aria-label="Поиск">Найти</button>
+          <span class="placeholder">Поиск по сайту</span>
         </form>
 		    <ul class="user">
 		      <li class="account">
@@ -72,9 +73,15 @@
           <div class="filter-wrapper">
             <div class="filter-controls">
               <b>Стоимость</b>
-              <span class="handle" aria-label="Выбор цены">[]</span>
-              <span class="range-price" aria-label="Ползунок выбора цены">--</span>
-              <input type="range" id="price" min="0" max="8000" value="5000">
+              <div class="range">
+                <!-- реализация с помощью javascript? -->
+                <input type="hidden" id="min-price">
+                <input type="hidden" id="max-price">
+                <label for="min-price" class="handle min" aria-label="Выбор цены"></label>
+                <span class="range-price" aria-label="Ползунок выбора цены"></span>
+                <label for="max-price" class="handle max" aria-label="Выбор цены"></label>
+                <span class="range-price no-selected" aria-label="Ползунок выбора цены"></span>
+              </div>
             </div>
             <div class="filter-controls">
               <b>Цвет</b>
@@ -105,11 +112,11 @@
               <b>Bluetooth</b>
               <ul>
                 <li class="bluetooth">
-                  <input type="radio" class="visually-hidden" id="yes" name="yes" checked>
+                  <input type="radio" class="visually-hidden" id="yes" name="bluetooth" checked>
                   <label for="yes" class="filter-radio checked">Есть</label>
                 </li>
                 <li class="bluetooth">
-                  <input type="radio" class="visually-hidden" id="no" name="no">
+                  <input type="radio" class="visually-hidden" id="no" name="bluetooth">
                   <label for="no" class="filter-radio">Нет</label>
                 </li>
               </ul>
@@ -124,8 +131,8 @@
               <li class="sort-item selected"><a href="#">По цене</a></li>
               <li class="sort-item"><a href="#">По типу</a></li>
               <li class="sort-item"><a href="#">По популярности</a></li>
-              <li class="icon-dir up"><a href="#" aria-label="По убыванию">></a></li>
-              <li class="icon-dir down"><a href="#" aria-label="По возрастанию"><</a></li>
+              <li class="icon-dir up"><a href="#" title="По убыванию" aria-label="По убыванию"></a></li>
+              <li class="icon-dir down"><a href="#" title="По возрастанию" aria-label="По возрастанию"></a></li>
             </ul>
           </div>
           <ul class="catalog-items">

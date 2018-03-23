@@ -59,6 +59,8 @@ b, h2 {
   margin-left: 12px;
 }
 div.slide-header {
+  display: inline-block;
+  text-align: right;
   position: relative;
   top: 10px;
   height: 130px;
@@ -219,16 +221,75 @@ b.slide-header, .slide-description, .more-info, .more-info-descriptions {
   list-style: none;
 }
 .catalog-menu .col-items:first-child {
-  padding-left: 0px;
+  padding-left: 60px;
 }
 .user .cart {
   margin-left: 38px;
 }
 .search {
+  position: relative;
+  z-index: 2;
+  width: 315px;
+  margin-left: 40px;
   font-family: "Open Sans", "Arial", sans-serif;
   background-color: transparent;
   border: none;
+}
+input.search:hover ~ .placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+.btn-search {
+  right: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  border: 2px solid #000000;
+  min-width: 84px;
+  height: 46px;
+  background-color: transparent;
+  display: none;
+  margin-right: 0;
+}
+.btn-search:hover {
+  color: rgba(255, 255, 255, 1);
+  background-color: #000000;
+}
+.btn-search:active {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #000000;
+}
+input.search:focus ~ .btn-search {
+  display: inline-block;
+}
+input.search:focus ~ .placeholder {
+  display: none;
+}
+.placeholder {
+  position: absolute;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  z-index: 0;
+  top: 13px;
+  left: 37px;
   color: rgba(0, 0, 0, 0.3);
+}
+.search-form {
+  position: absolute;
+  width: 440px;
+  height: 46px;
+  margin-top: -4px;
+}
+.search-form::before {
+  position: absolute;
+  top: 10px;
+  display: inline-block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+input.search:focus ~ .menu-container .search-form {
+  border-bottom: 2px solid #000000;
 }
 .account {
   margin-right: auto;
@@ -341,6 +402,21 @@ a.btn-device {
   flex-direction: row;
   padding: 0px;
 }
+.breadcrumbs-arrow {
+  margin-right: 38px;
+}
+.breadcrumbs-arrow:not(:last-child)::after {
+  content: "";
+  position: relative;
+  bottom: 1px;
+  left: 17px;
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  transform: rotate(-45deg);
+}
 .breadcrumbs-arrow a {
   color: rgba(0, 0, 0, 0.3);
   text-decoration: none;
@@ -366,7 +442,7 @@ a.btn-device {
 }
 .sorts {
   position: relative;
-  left: 100px;
+  left: 45px;
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -375,15 +451,71 @@ a.btn-device {
   justify-content: space-between;
 }
 .sorts li {
+  font-size: 14px;
   line-height: 70px;
   display: flex;
   flex-direction: row;
+  margin-right: 25px;
+}
+.filter-controls {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
 }
 .filter-header, .sort-header {
   letter-spacing: 0.26em;
   font-size: 16px;
   text-transform: uppercase;
   line-height: 70px;
+}
+.handle {
+  position: absolute;
+  left: -4px;
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  border: 10px solid #ffffff;
+  background-color: #b1b1b1;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.08);
+  z-index: 1;
+}
+.handle.max {
+  left: 100px;
+}
+.handle::after {
+  position: absolute;
+  top: 20px;
+  display: inline-block;
+  min-width: 60px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.3);
+}
+.handle.min::after {
+  content: "от 0";
+}
+.handle.max::after {
+  content: "до 5000";
+  left: -25px;
+}
+.range {
+  position: relative;
+  margin-top: 20px;
+}
+.range-price {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 3px;
+  background-color: #91c92f;
+  padding: 0;
+}
+.range-price.no-selected {
+  position: relative;
+  background-color: gray;
+  width: 100px;
 }
 .sort-header {
   margin-left: 70px;
@@ -411,6 +543,20 @@ div.sort {
   text-decoration: none;
   color: rgba(0, 0, 0, 1);
 }
+.icon-dir.up a::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  border: 5px solid transparent;
+  border-bottom: 10px solid rgba(0, 0, 0, 0.3);
+}
+.icon-dir.down a::after {
+  content: ""; 
+  position: absolute;
+  bottom: 25px;
+  border: 5px solid transparent;
+  border-top: 10px solid #000000;
+}
 .filter-wrapper {
   margin-left: 200px;
 }
@@ -418,12 +564,39 @@ div.sort {
   list-style: none;
   padding-left: 20px;
 }
-.filter-controls label::before {
+.filter-controls li {
+  margin: 25px 0;
+}
+.filter-checkbox::before, .filter-radio::before {
+  position: relative;
+  content: "";
+  display: inline-block;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+}
+.filter-checkbox::before {
+  top: 5px;
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.svg");
+}
+.filter-radio::before {
+  top: 6px;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/radio-off.svg");
+}
+.filter-controls input[type="checkbox"]:checked ~ .filter-checkbox::before {
+  background-image: url("../img/checkbox-on.svg");
+}
+.bluetooth input[type="radio"]:checked ~ .filter-radio::before {
+  background-image: url("../img/radio-on.svg");
 }
 .filter-checkbox, .filter-radio {
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: normal;
   font-size: 14px;
+  line-height: 20px;
 }
 .items .catalog-items, .items .bar-pages {
   padding: 0;
@@ -454,16 +627,14 @@ div.sort {
   padding-right: 50px;
   position: relative;
   top: -9px;
-  left: 830px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bold;
   font-size: 180px;
   color: #ffffff;
 }
-.slide-number::before {
-  position: relative;
-  top: -94px;
-  left: -230px;
+b.slide-header::before {
+  position: absolute;
+  top: -42px;
   content: "";
   display: inline-block;
   width: 100px;
@@ -660,6 +831,7 @@ ul.popular {
   position: absolute;
   top: 28px;
   right: 28px;
+  z-index: 3;
   text-transform: uppercase;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bold;
@@ -919,7 +1091,9 @@ footer a {
   margin: 0px;
   margin-top: 5px;
   margin-left: 40px;
-  justify-content: space-between;
+}
+.footer-user li {
+  margin-left: 20px;
 }
 .footer-user .login {
   margin-right: 0;
@@ -931,7 +1105,7 @@ footer a {
   margin: 0;
 }
 .footer-account .login {
-  margin-right: 20px;
+  margin-right: 5px;
 }
 .footer-account .logout {
   color: rgba(255, 255, 255, 0.3);
