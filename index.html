@@ -57,7 +57,7 @@
         <input type="radio" class="visually-hidden" id="slide-2" name="toggle">
         <input type="radio" class="visually-hidden" id="slide-3" name="toggle">
         <div class="slide">
-          <div class="slide-header">
+          <div class="slider-header">
             <span class="slide-number" id="slide1">01</span>
             <span class="slide-number" id="slide2">02</span>
 		        <span class="slide-number" id="slide3">03</span>
@@ -297,20 +297,26 @@
         </div>
       </div>
     </footer>
-    <section class="map-popup">
+    <section class="popup map-popup">
       <img src="img/map.jpg" alt="Карта">
       <button class="modal-close" type="button" aria-label="Закрыть">+</button>
     </section>
-    <section class="write-us">
+    <section class="popup write-us">
       <form method="POST" action="index.html">
         <div class="input-wrapper">
-          <label for="name">Ваше имя</label>
-          <input type="text" name="name" id="name" placeholder="Имя Фамилия">
-          <label for="email">Ваш e-mail</label>
-          <input type="email" name="email" id="email" placeholder="mail@example.ru">
+          <div class="field">
+            <label for="name">Ваше имя</label>
+            <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+          </div>
+          <div class="field">
+            <label for="email">Ваш e-mail</label>
+            <input type="email" name="email" id="email" placeholder="mail@example.ru">
+          </div>
         </div>
-        <label for="message">Текст письма</label>
-        <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
+        <div class="message-wrapper">
+          <label for="message">Текст письма</label>
+          <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
+        </div>
         <button class="btn-device msg-submit" type="submit" aria-label="Отправить">Отправить</button>
       </form>
       <button class="modal-close" type="button" aria-label="Закрыть">+</button>
