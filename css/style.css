@@ -1591,6 +1591,6 @@ address {
 .modal-close:active {
   background-color: rgba(240, 197, 46, 0.3);
 }
-.popup .pupup-open {
+.popup.popup-open {
   display: flex;
 }
