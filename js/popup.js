@@ -1,12 +1,14 @@
 
 var writePopup = document.querySelector(".popup.write-us");
 var mapPopup = document.querySelector(".popup.map-popup");
-var writeus = document.querySelector(".write");
+var writeUs = document.querySelector(".write");
 var btnClose = writePopup.querySelector(".modal-close");
 var mapClose = mapPopup.querySelector(".modal-close");
 var map = document.querySelector(".map a");
-var catalog = document.querySelector(".catalog a");
-var menu = document.querySelector(".catalog-menu");
+var popupForm = writePopup.querySelector("form");
+var name = writePopup.querySelector("#name");
+var email = writePopup.querySelector("#email");
+var message = writePopup.querySelector("#message");
 
 function openPopup(popup, evt) {
   evt.preventDefault();
@@ -17,11 +19,12 @@ function closePopup(popup, evt) {
 	popup.classList.remove("popup-open");
 }
 
-writeus.addEventListener("click", function(evt) {
+writeUs.addEventListener("click", function(evt) {
   openPopup(writePopup, evt);
 });
 btnClose.addEventListener("click", function(evt) {
-  closePopup(writePopup, evt)
+  closePopup(writePopup, evt);
+  writePopup.classList.remove("popup-error");
 });
 map.addEventListener("click", function(evt) {
   openPopup(mapPopup, evt);
@@ -29,7 +32,9 @@ map.addEventListener("click", function(evt) {
 mapClose.addEventListener("click", function(evt) {
   closePopup(mapPopup, evt);
 });
-catalog.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  menu.classList.toggle("visually-hidden");
+popupForm.addEventListener("submit", function(evt) {
+  if(!name.value || !email.value || !message.value) {
+    evt.preventDefault();
+    writePopup.classList.add("popup-error");
+  }
 });
