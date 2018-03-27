@@ -1216,9 +1216,10 @@ ul.popular {
 .logo.vive:hover {
   background-image: url("../img/logo-4-hover.jpg");
 }
-.bar-pages {
+.items .bar-pages {
   background-color: rgba(0, 0, 0, 0.08);
   height: 70px;
+  margin-bottom: 76px;
 }
 .pages {
   list-style: none;
@@ -1503,7 +1504,7 @@ address {
   display: flex;
 }
 .popup {
-  display: block;
+  display: none;
   flex-direction: row;
   position: fixed;
   top: 120px;
@@ -1589,4 +1590,7 @@ address {
 }
 .modal-close:active {
   background-color: rgba(240, 197, 46, 0.3);
+}
+.popup .pupup-open {
+  display: flex;
 }
