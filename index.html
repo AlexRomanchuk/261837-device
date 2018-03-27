@@ -20,14 +20,14 @@
           <span class="placeholder">Поиск по сайту</span>
         </form>
 		    <ul class="user">
-          <li class="login"><a href="#">Войти</a></li>
-          <li class="compare"><a href="#">Сравнить</a></li>
-          <li class="cart"><a href="#">Корзина</a></li>
+          <li class="login"><a href="catalog.html">Войти</a></li>
+          <li class="compare"><a href="catalog.html">Сравнить</a></li>
+          <li class="cart"><a href="catalog.html">Корзина</a></li>
         </ul>
       </div>
       <nav class="main-navigation">
         <ul class="main-menu">
-		      <li class="catalog"><a href="#">Каталог товаров</a></li>
+		      <li class="catalog"><a href="menu.html">Каталог товаров</a></li>
 		      <li class="right-wrapper">
 		        <ul>
               <li><a href="#">Доставка</a></li>
@@ -39,16 +39,16 @@
       </nav>
       <nav class="catalog-menu visually-hidden">
         <ul class="col-items">
-          <li class="catalog-item"><a href="#">Виртуальная реальность</a></li>
-          <li class="catalog-item"><a href="#">Моноподы для селфи</a></li>
-          <li class="catalog-item"><a href="#">Экшн-камеры</a></li>
+          <li class="catalog-item"><a href="catalog.html">Виртуальная реальность</a></li>
+          <li class="catalog-item"><a href="catalog.html">Моноподы для селфи</a></li>
+          <li class="catalog-item"><a href="catalog.html">Экшн-камеры</a></li>
         </ul>
         <ul class="col-items">
-          <li class="catalog-item"><a href="#">Фитнес-браслеты</a></li>
-          <li class="catalog-item"><a href="#">Умные часы</a></li>
+          <li class="catalog-item"><a href="catalog.html">Фитнес-браслеты</a></li>
+          <li class="catalog-item"><a href="catalog.html">Умные часы</a></li>
         </ul>
         <ul class="col-items">
-          <li class="catalog-item"><a href="#">Квадрокоперы</a></li>
+          <li class="catalog-item"><a href="catalog.html">Квадрокоперы</a></li>
         </ul>
       </nav>
       </div>
@@ -77,13 +77,13 @@
 				        <li>
                   <b class="slide-header" id="header2">Худеем<br> правильно!</b>
                   <p class="slide-description" id="desc2">
-                    Мотивирующие браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+                    Мотивирующие браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.
                   </p>
 			          </li>
 				        <li>
                   <b class="slide-header" id="header3">Порхает как бабочка, жалит как пчела!</b>
                   <p class="slide-description" id="desc3">
-                    Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+                    Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.
                   </p>
 			          </li>
               </ul>
@@ -150,7 +150,7 @@
           <li class="popular-item">
             <a href="#">
               <div class="popular-image">
-                <img src="img/popular-2.svg" width="87" height="117" alt="Моноподы для селфи">
+                <img src="img/popular-2.svg" class="selfie" width="87" height="117" alt="Моноподы для селфи">
               </div>
               <span class="popular-header">Моноподы<br> для селфи</span>
             </a>
@@ -158,7 +158,7 @@
           <li class="popular-item">
             <a href="#">
               <div class="popular-image">
-                <img src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
+                <img src="img/popular-3.svg" class="camera" width="71" height="87" alt="Экшн-камеры">
               </div>
               <span class="popular-header">Экшн-камеры</span>
             </a>
@@ -166,7 +166,7 @@
           <li class="popular-item">
             <a href="#">
               <div class="popular-image">
-                <img src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
+                <img src="img/popular-4.svg" class="fitness" width="107" height="65" alt="Фитнес-браслеты">
               </div>
               <span class="popular-header">Фитнес-браслеты</span>
             </a>
@@ -174,7 +174,7 @@
           <li class="popular-item">
             <a href="#">
               <div class="popular-image">
-                <img src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
+                <img src="img/popular-5.svg" class="clock" width="56" height="98" alt="Умные часы">
               </div>
               <span class="popular-header">Умные часы</span>
             </a>
@@ -182,7 +182,7 @@
           <li class="popular-item">
             <a href="#">
               <div class="popular-image">
-                <img src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
+                <img src="img/popular-6.svg" class="dron" width="132" height="69" alt="Квадрокоптеры">
               </div>
               <span class="popular-header">Квадрокоптеры</span>
             </a>
@@ -206,7 +206,7 @@
                 <li id="services-head2"><h2>Гарантия</h2></li>
                 <li id="services-head3"><h2>Кредит</h2></li>
               </ul>
-              <ul>
+              <ul class="descriptions">
                 <li id="services-desc1">
                   <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
                 </li>
@@ -218,15 +218,15 @@
                 </li>
               </ul>
             </div>
-            <img src="img/delivery.svg" class="services-image"  id="services-img1" alt="Доставка">
-            <img src="img/warranty.svg" class="services-image"  id="services-img2" alt="Гарантия">
-            <img src="img/credit.svg" class="services-image"  id="services-img3" alt="Кредит">
+            <img src="img/delivery.svg" class="services-image" id="services-img1" width="136" height="316" alt="Доставка">
+            <img src="img/warranty.svg" class="services-image" id="services-img2" width="171" height="316" alt="Гарантия">
+            <img src="img/credit.svg" class="services-image" id="services-img3" width="156" height="316" alt="Кредит">
           </div>
         </div>
       </section>
       <section class="logotypes full-width">
         <ul>
-          <li class="logo dji"></div></li>
+          <li class="logo dji"></li>
           <li class="logo gopro"></li>
           <li class="logo spg"></li>
           <li class="logo vive"></li>
@@ -249,8 +249,8 @@
         <section class="contacts">
           <h2 class="info-header">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-          <div class="map"><a href="#"><img src="img/map.jpg" alt="карта"></a></div>
-          <a href="#" class="btn-device info-more write">Напишите нам</a>
+          <div class="map"><a href="https://goo.gl/maps/6WfqZTzHcA62"><img src="img/map.jpg" width="560" height="222" alt="карта"></a></div>
+          <a href="writeus.html" class="btn-device info-more write">Напишите нам</a>
         </section>
       </div>
     </main>
@@ -263,9 +263,9 @@
           </a>
 		      <nav class="footer-user">
             <ul>
-              <li class="login"><a href="#">Войти</a></li>
-              <li class="compare"><a href="#">Сравнить</a></li>
-              <li class="cart"><a href="#">Корзина</a></li>
+              <li class="footer-login"><a href="#">Войти</a></li>
+              <li class="footer-compare"><a href="#">Сравнить</a></li>
+              <li class="footer-cart"><a href="#">Корзина</a></li>
             </ul>
           </nav>
         </div>
@@ -284,30 +284,30 @@
           <div class="footer-social">
             <ul>
               <li class="social-button">
-                <a href="#" aria-label="Facebook" alt="">
-			            <img src="img/fb.png">
+                <a href="#" aria-label="Facebook">
+			            <img src="img/fb.png" width="32" height="32" alt="">
 			          </a>
               </li>
               <li class="social-button">
                 <a href="#" aria-label="Instagramm">
-			            <img src="img/instagramm.png" alt="">
+			            <img src="img/instagramm.png" width="32" height="32" alt="">
 			          </a>
               </li>
               <li class="social-button">
                 <a href="#" aria-label="Twitter">
-			            <img src="img/twitter.png" alt="">
+			            <img src="img/twitter.png" width="32" height="32" alt="">
 			          </a>
               </li>
             </ul>
           </div>
           <a href="https://htmlacademy.ru/intensive/htmlcss" class="logo-html">
-            <img src="img/logo-html.svg" alt="">
+            <img src="img/logo-html.svg" width="27.92" height="34.08" alt="">
           </a>
         </div>
       </div>
     </footer>
     <section class="popup map-popup">
-      <img src="img/map-popup.jpg" alt="Карта">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931638496!3d55.687030980535816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1522170413652" width="960" height="559" frameborder="0" allowfullscreen></iframe>
       <button class="modal-close" type="button" aria-label="Закрыть">+</button>
     </section>
     <section class="popup write-us">
