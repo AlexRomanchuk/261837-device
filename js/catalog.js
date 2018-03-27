@@ -5,3 +5,8 @@ catalog.addEventListener("click", function(evt) {
   evt.preventDefault();
   menu.classList.toggle("visually-hidden");
 });
+menu.addEventListener("click", function() {
+  if (!menu.classList.contains("visually-hidden")) {
+    menu.classList.add("visually-hidden");
+  }
+});
