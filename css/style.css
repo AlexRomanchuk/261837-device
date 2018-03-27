@@ -1870,6 +1870,9 @@ address {
   margin-left: 12px;
   margin-right: 11px;
 }
+.social-button a {
+  opacity: 0.6;
+}
 .social-button a:hover {
   opacity: 1;
 }
