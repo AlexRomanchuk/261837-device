@@ -7,10 +7,11 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
-    <header class="main-header full-width">
+    <header class="full-width">
+      <div class="main-header">
       <h1 class="main-logo visually-hidden">Device</h1>
       <a href="#" class="main-header-logo">
-        <img src="img/logo.png" class="logo" width="163" height="36" alt="Лого">
+        <img src="img/logo.png" width="163" height="36" alt="Лого">
       </a>
 	    <div class="menu-container">
         <form class="search-form" method="GET" action="index.html">
@@ -50,6 +51,7 @@
           <li class="catalog-item"><a href="#">Квадрокоперы</a></li>
         </ul>
       </nav>
+      </div>
     </header>
     <main>
       <section class="slider full-width">
@@ -95,34 +97,40 @@
 		          </div>
 			        <ul class="mores">
 				        <li>
-                  <table class="more-info-descriptions" id="table1">
-                    <tr>
-                      <td>8,5 м</td><td>5 кг</td><td>Карбон</td>
-                    </tr>
-                    <tr>
-                      <th>Длина палки</th><th>Вес палки</th><th>Материал</th>
-                    </tr>
-                  </table>
+                  <div class="more-info-descriptions" id="table1">
+                    <div class="cell">
+                      <span class="data">8,5 м</span>
+                      <span class="property">Длина палки</span>
+                    </div>
+                    <div class="cell">
+                      <span class="data">5 кг</span>
+                      <span class="property">Вес палки</span>
+                    </div>
+                    <div class="cell">
+                      <span class="data">Карбон</span>
+                      <span class="property">Материал</span>
+                    </div>
+                  </div>
 				        </li>
 				        <li>
-                  <table class="more-info-descriptions" id="table2">
-                    <tr>
-                      <td>48 часов</td>
-                    </tr>
-                    <tr>
-                      <th>Без подзарядки</th>
-                    </tr>
-                  </table>
+                  <div class="more-info-descriptions" id="table2">
+                    <div class="cell">
+                      <span class="data">48 часов</span>
+                      <span class="property">Без подзарядки</span>
+                    </div>
+                  </div>
 				        </li>
 				        <li>
-                  <table class="more-info-descriptions" id="table3">
-                    <tr>
-                      <td>800 м</td><td>50 м</td>
-                    </tr>
-                    <tr>
-                      <th>Дальность полета</th><th>Радиус поражения</th>
-                    </tr>
-                  </table>
+                  <div class="more-info-descriptions" id="table3">
+                    <div class="cell">
+                      <span class="data">800 м</span>
+                      <span class="property">Дальность полета</span>
+                    </div>
+                    <div class="cell">
+                      <span class="data">50 м</span>
+                      <span class="property">Радиус поражения</span>
+                    </div>
+                  </div>
 				        </li>
 			        </ul>
             </div>
@@ -134,7 +142,7 @@
           <li class="popular-item">
             <a href="#">
               <div class="popular-image">
-                <img src="img/popular-1.svg" alt="Виртуальная реальность">
+                <img src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
               </div>
               <span class="popular-header">Виртуальная реальность</span>
             </a>
@@ -142,7 +150,7 @@
           <li class="popular-item">
             <a href="#">
               <div class="popular-image">
-                <img src="img/popular-2.svg" alt="Моноподы для селфи">
+                <img src="img/popular-2.svg" width="87" height="117" alt="Моноподы для селфи">
               </div>
               <span class="popular-header">Моноподы<br> для селфи</span>
             </a>
@@ -150,7 +158,7 @@
           <li class="popular-item">
             <a href="#">
               <div class="popular-image">
-                <img src="img/popular-3.svg" alt="Экшн-камеры">
+                <img src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
               </div>
               <span class="popular-header">Экшн-камеры</span>
             </a>
@@ -158,7 +166,7 @@
           <li class="popular-item">
             <a href="#">
               <div class="popular-image">
-                <img src="img/popular-4.svg" alt="Фитнес-браслеты">
+                <img src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
               </div>
               <span class="popular-header">Фитнес-браслеты</span>
             </a>
@@ -166,7 +174,7 @@
           <li class="popular-item">
             <a href="#">
               <div class="popular-image">
-                <img src="img/popular-5.svg" alt="Умные часы">
+                <img src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
               </div>
               <span class="popular-header">Умные часы</span>
             </a>
@@ -174,61 +182,63 @@
           <li class="popular-item">
             <a href="#">
               <div class="popular-image">
-                <img src="img/popular-6.svg" alt="Квадрокоптеры">
+                <img src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
               </div>
               <span class="popular-header">Квадрокоптеры</span>
             </a>
           </li>
         </ul>
       </section>
-      <section class="servises">
-        <div class="servises-wrapper full-width">
-          <input type="radio" class="visually-hidden" id="servise-1" name="servises" checked>
-          <input type="radio" class="visually-hidden" id="servise-2" name="servises">
-          <input type="radio" class="visually-hidden" id="servise-3" name="servises">
-          <ul class="servises-menu">
-            <li class="servises-item"><label for="servise-1">Доставка</label></li>
-            <li class="servises-item"><label for="servise-2">Гарантия</label></li>
-            <li class="servises-item"><label for="servise-3">Кредит</label></li>
+      <section class="services">
+        <div class="services-wrapper full-width">
+          <input type="radio" class="visually-hidden" id="service-1" name="services" checked>
+          <input type="radio" class="visually-hidden" id="service-2" name="services">
+          <input type="radio" class="visually-hidden" id="service-3" name="services">
+          <ul class="services-menu">
+            <li class="services-item"><label for="service-1">Доставка</label></li>
+            <li class="services-item"><label for="service-2">Гарантия</label></li>
+            <li class="services-item"><label for="service-3">Кредит</label></li>
           </ul>
-          <div class="servises-description">
+          <div class="services-description">
             <div class="wrapper">
               <ul>
-                <li id="servises-head1"><h2>Доставка</h2></li>
-                <li id="servises-head2"><h2>Гарантия</h2></li>
-                <li id="servises-head3"><h2>Кредит</h2></li>
+                <li id="services-head1"><h2>Доставка</h2></li>
+                <li id="services-head2"><h2>Гарантия</h2></li>
+                <li id="services-head3"><h2>Кредит</h2></li>
               </ul>
               <ul>
-                <li id="servises-desc1">
+                <li id="services-desc1">
                   <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
                 </li>
-                <li id="servises-desc2">
+                <li id="services-desc2">
                   <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
                 </li>
-                <li id="servises-desc3">
+                <li id="services-desc3">
                   <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
                 </li>
               </ul>
             </div>
-            <img src="img/delivery.svg" class="servises-image"  id="servises-img1" alt="Доставка">
-            <img src="img/warranty.svg" class="servises-image"  id="servises-img2" alt="Гарантия">
-            <img src="img/credit.svg" class="servises-image"  id="servises-img3" alt="Кредит">
+            <img src="img/delivery.svg" class="services-image"  id="services-img1" alt="Доставка">
+            <img src="img/warranty.svg" class="services-image"  id="services-img2" alt="Гарантия">
+            <img src="img/credit.svg" class="services-image"  id="services-img3" alt="Кредит">
           </div>
         </div>
       </section>
       <section class="logotypes full-width">
         <ul>
-          <li class="logo"><img src="img/logo-1.jpg" alt="DJI"></li>
-          <li class="logo"><img src="img/logo-3.jpg" alt="GoPro"></li>
-          <li class="logo"><img src="img/logo-2.jpg" alt="SPGadget"></li>
-          <li class="logo"><img src="img/logo-4.jpg" alt="Vive"></li>
+          <li class="logo dji"></div></li>
+          <li class="logo gopro"></li>
+          <li class="logo spg"></li>
+          <li class="logo vive"></li>
         </ul>
       </section>
       <div class="info-wrapper full-width">
         <section class="info">
           <h2 class="info-header">О нас</h2>
-          <p>Огромный выбор гаджетов не оставит равнодушным гика,<br> который есть в каждом из нас.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки<br> России! DEVICE работает со многими транспортными компаниями:</p>
+          <article>
+            <p class="small">Огромный выбор гаджетов не оставит равнодушным гика,<br> который есть в каждом из нас.</p>
+            <p>Мы можем доставить ваш товар в самые отдаленные точки<br> России! DEVICE работает со многими транспортными компаниями:</p>
+          </article>
           <ul class="traiding">
             <lI>Деловые Линии</li>
             <li>Автотрейдинг</li>
@@ -247,10 +257,9 @@
     <footer>
       <div class="footer-wrapper full-width">
         <div class="footer-container">
-          <!-- В SVG для footer в файлах .svg задал fill с цветом #ffc600 -->
-          <h1 class="logo visually-hidden">Device</h1>
+          <h1 class="footer-logo visually-hidden">Device</h1>
           <a href="#" class="logo-footer">
-            <img src="img/logo-footer.png" width="163" height="36" class="footer-logo" alt="Лого">
+            <img src="img/logo-footer.png" width="163" height="36" alt="Лого">
           </a>
 		      <nav class="footer-user">
             <ul>
@@ -275,18 +284,18 @@
           <div class="footer-social">
             <ul>
               <li class="social-button">
-                <a href="#" aria-label="Facebook">
+                <a href="#" aria-label="Facebook" alt="">
 			            <img src="img/fb.png">
 			          </a>
               </li>
               <li class="social-button">
                 <a href="#" aria-label="Instagramm">
-			            <img src="img/instagramm.png">
+			            <img src="img/instagramm.png" alt="">
 			          </a>
               </li>
               <li class="social-button">
                 <a href="#" aria-label="Twitter">
-			            <img src="img/twitter.png">
+			            <img src="img/twitter.png" alt="">
 			          </a>
               </li>
             </ul>
@@ -297,11 +306,11 @@
         </div>
       </div>
     </footer>
-    <section class="popup map-popup">
+    <section class="popup map-popup visually-hidden">
       <img src="img/map-popup.jpg" alt="Карта">
       <button class="modal-close" type="button" aria-label="Закрыть">+</button>
     </section>
-    <section class="popup write-us">
+    <section class="popup write-us visually-hidden">
       <form method="POST" action="index.html">
         <div class="input-wrapper">
           <div class="field">

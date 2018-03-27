@@ -7,61 +7,63 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
-    <header class="main-header full-width">
-      <h1 class="main-logo visually-hidden">Device</h1>
-      <a href="#" class="main-header-logo">
-        <img src="img/logo.png" class="logo" width="163" height="36" alt="Лого">
-      </a>
-       <div class="menu-container">
-        <form class="search-form" method="GET" action="index.html">
-          <input class="search" type="text">
-          <button type="submit" class="btn-search" aria-label="Поиск">Найти</button>
-          <span class="placeholder">Поиск по сайту</span>
-        </form>
-		    <ul class="user">
-		      <li class="account">
-            <ul>
-              <li class="login"><a href="#">Валентин Петухов</a></li>
-              <li class="logout"><a href="#" class="logout">Выйти</a></li>
-            </ul>
-          </li>
-          <li class="compare"><a href="#">Сравнить</a></li>
-          <li class="cart"><a href="#">Корзина</a></li>
-        </ul>
-      </div>
-      <nav class="main-navigation">
-        <ul class="main-menu">
-		      <li class="catalog"><a href="#">Каталог товаров</a></li>
-		      <li class="right-wrapper">
-		        <ul>
-              <li><a href="#">Доставка</a></li>
-              <li><a href="#">Гарантия</a></li>
-              <li class="contacts"><a href="#">Контакты</a></li>
-			      </ul>
-	        </li>
-        </ul>
-      </nav>
-      <nav class="catalog-menu visually-hidden">
-        <ul class="col-items">
-          <li class="catalog-item"><a href="#">Виртуальная реальность</a></li>
-          <li class="catalog-item"><a href="#">Моноподы для селфи</a></li>
-          <li class="catalog-item"><a href="#">Экшн-камеры</a></li>
-        </ul>
-        <ul class="col-items">
-          <li class="catalog-item"><a href="#">Фитнес-браслеты</a></li>
-          <li class="catalog-item"><a href="#">Умные часы</a></li>
-        </ul>
-        <ul class="col-items">
-          <li class="catalog-item"><a href="#">Квадрокоперы</a></li>
-        </ul>
-      </nav>
-      <div class="breadcrumbs">
-        <b class="category">Моноподы для селфи</b>
-        <ul>
-          <li class="breadcrumbs-arrow"><a href="#">Главная</a></li>
-          <li class="breadcrumbs-arrow"><a href="#">Каталог товаров</a></li>
-          <li class="breadcrumbs-arrow"><a href="#">Моноподы для селфи</a></li>
-        </ul>
+    <header class="full-width">
+      <div class="main-header">
+        <h1 class="main-logo visually-hidden">Device</h1>
+        <a href="#" class="main-header-logo">
+          <img src="img/logo.png" width="163" height="36" alt="Лого">
+        </a>
+         <div class="menu-container">
+          <form class="search-form" method="GET" action="index.html">
+            <input class="search" type="text">
+            <button type="submit" class="btn-search" aria-label="Поиск">Найти</button>
+            <span class="placeholder">Поиск по сайту</span>
+          </form>
+		      <ul class="user">
+		        <li class="account">
+              <ul>
+                <li class="login"><a href="#">Валентин Петухов</a></li>
+                <li class="logout"><a href="#" class="logout">Выйти</a></li>
+              </ul>
+            </li>
+            <li class="compare"><a href="#">Сравнить</a></li>
+            <li class="cart"><a href="#">Корзина</a></li>
+          </ul>
+        </div>
+        <nav class="main-navigation">
+          <ul class="main-menu">
+		        <li class="catalog"><a href="#">Каталог товаров</a></li>
+		        <li class="right-wrapper">
+		          <ul>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Гарантия</a></li>
+                <li class="contacts"><a href="#">Контакты</a></li>
+			        </ul>
+	          </li>
+          </ul>
+        </nav>
+        <nav class="catalog-menu visually-hidden">
+          <ul class="col-items">
+            <li class="catalog-item"><a href="#">Виртуальная реальность</a></li>
+            <li class="catalog-item"><a href="#">Моноподы для селфи</a></li>
+            <li class="catalog-item"><a href="#">Экшн-камеры</a></li>
+          </ul>
+          <ul class="col-items">
+            <li class="catalog-item"><a href="#">Фитнес-браслеты</a></li>
+            <li class="catalog-item"><a href="#">Умные часы</a></li>
+          </ul>
+          <ul class="col-items">
+            <li class="catalog-item"><a href="#">Квадрокоперы</a></li>
+          </ul>
+        </nav>
+        <div class="breadcrumbs">
+          <b class="category">Моноподы для селфи</b>
+          <ul>
+            <li class="breadcrumbs-arrow"><a href="#">Главная</a></li>
+            <li class="breadcrumbs-arrow"><a href="#">Каталог товаров</a></li>
+            <li class="breadcrumbs-arrow"><a href="#">Моноподы для селфи</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -76,8 +78,8 @@
                 <b>Стоимость</b>
                 <div class="range">
                   <!-- реализация с помощью javascript? -->
-                  <input type="hidden" id="min-price">
-                  <input type="hidden" id="max-price">
+                  <input type="text" class="visually-hidden" id="min-price">
+                  <input type="text" class="visually-hidden" id="max-price">
                   <span class="range-price no-selected left" aria-label="Ползунок выбора цены"></span>
                   <label for="min-price" class="handle min" aria-label="Выбор цены"></label>
                   <span class="range-price" aria-label="Ползунок выбора цены"></span>
@@ -149,7 +151,7 @@
                   <a href="#" class="btn-compare" aria-label="Сравнить">Добавить к сравнению</a>
                 </div>
                 <div class="item-description">
-                  <span class="item-name">Любительская селфи-палка</span>
+                  <a href="#" class="item-name">Любительская селфи-палка</a>
                   <span class="item-price">500 руб.</span>
                 </div>
               </li>
@@ -160,7 +162,7 @@
                   <a href="#" class="btn-compare" aria-label="Сравнить">Добавить к сравнению</a>
                 </div>
                 <div class="item-description">
-                  <span class="item-name">Профессиональная<br> селфи-палка</span>
+                  <a href="#" class="item-name">Профессиональная<br> селфи-палка</a>
                   <span class="item-price">1 500 руб.</span>
                 </div>
               </li>
@@ -171,7 +173,7 @@
                   <a href="#" class="btn-compare" aria-label="Сравнить">Добавить к сравнению</a>
                 </div>
                 <div class="item-description">
-                  <span class="item-name">Непотопляемая селфи-палка</span>
+                  <a href="#" class="item-name">Непотопляемая селфи-палка</a>
                   <span class="item-price">2 500 руб.</span>
                 </div>
               </li>
@@ -183,7 +185,7 @@
                 </div>
                 <div class="item-new">New</div>
                 <div class="item-description">
-                  <span class="item-name">Сефли-палка &#171;Следуй за мной&#187;</span>
+                  <a href="#" class="item-name">Сефли-палка &#171;Следуй за мной&#187;</a>
                   <span class="item-price">4 900 руб.</span>
                 </div>
               </li>
@@ -207,9 +209,9 @@
       <div class="footer-wrapper full-width">
         <div class="footer-container">
           <!-- В SVG для footer в файлах .svg задал fill с цветом #ffc600 -->
-          <h1 class="logo visually-hidden">Device</h1>
+          <h1 class="footer-logo visually-hidden">Device</h1>
           <a href="#" class="logo-footer">
-            <img src="img/logo-footer.png" width="163" height="36" class="footer-logo" alt="Лого">
+            <img src="img/logo-footer.png" width="163" height="36" alt="Лого">
           </a>
 		      <nav class="footer-user">
             <ul>
@@ -239,18 +241,18 @@
           <div class="footer-social">
             <ul>
               <li class="social-button">
-                <a href="#" aria-label="Facebook">
+                <a href="#" aria-label="Facebook" alt="">
 			            <img src="img/fb.png">
                 </a>
               </li>
               <li class="social-button">
                 <a href="#" aria-label="Instagramm">
-			            <img src="img/instagramm.png">
+			            <img src="img/instagramm.png" alt="">
 			          </a>
               </li>
               <li class="social-button">
                 <a href="#" aria-label="Twitter">
-			            <img src="img/twitter.png">
+			            <img src="img/twitter.png" alt="">
 			          </a>
               </li>
             </ul>
