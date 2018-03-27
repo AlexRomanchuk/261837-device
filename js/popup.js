@@ -24,7 +24,7 @@ writeUs.addEventListener("click", function(evt) {
   openPopup(writePopup, evt);
   username.focus();
 });
-writeUs.addEventListener("keydown", function (evt) {
+writeUs.addEventListener("keydown", function(evt) {
   if (evt.keyCode === ENTER_KEYCODE) {
     openPopup(writePopup, evt);
     username.focus();
@@ -34,7 +34,7 @@ btnClose.addEventListener("click", function(evt) {
   closePopup(writePopup, evt);
   writePopup.classList.remove("popup-error");
 });
-window.addEventListener("keydown", function (evt) {
+window.addEventListener("keydown", function(evt) {
   if (evt.keyCode === ESC_KEYCODE) {
     evt.preventDefault();
     if (writePopup.classList.contains("popup-open")) {
@@ -46,7 +46,7 @@ window.addEventListener("keydown", function (evt) {
 map.addEventListener("click", function(evt) {
   openPopup(mapPopup, evt);
 });
-map.addEventListener("keydown", function (evt) {
+map.addEventListener("keydown", function(evt) {
   if (evt.keyCode === ENTER_KEYCODE) {
     openPopup(mapPopup, evt);
   }
@@ -54,7 +54,7 @@ map.addEventListener("keydown", function (evt) {
 mapClose.addEventListener("click", function(evt) {
   closePopup(mapPopup, evt);
 });
-window.addEventListener("keydown", function (evt) {
+window.addEventListener("keydown", function(evt) {
   if (evt.keyCode === ESC_KEYCODE) {
     evt.preventDefault();
     if (mapPopup.classList.contains("popup-open")) {
