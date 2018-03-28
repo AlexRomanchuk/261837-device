@@ -10,10 +10,29 @@ var popupForm = writePopup.querySelector("form");
 var username = writePopup.querySelector("[name=username]");
 var email = writePopup.querySelector("[name=email]");
 var message = writePopup.querySelector("[name=message]");
+var storage = "";
+var supportStorage = true;
 
-function openPopup(popup, evt) {
+try {
+  storage = localStorage.getItem("username");
+} catch(e) {
+  supportStorage = false;
+}
+
+function openMapPopup(evt) {
   evt.preventDefault();
-	popup.classList.add("popup-open");
+	mapPopup.classList.add("popup-open");
+}
+function openPopup(evt) {
+  evt.preventDefault();
+	writePopup.classList.add("popup-open");
+  if (storage) {
+    username.value = localStorage.getItem("username");
+    email.value = localStorage.getItem("email");
+    message.focus();
+  } else {
+    username.focus();
+  }
 }
 function closePopup(popup, evt) {
   evt.preventDefault();
@@ -21,13 +40,11 @@ function closePopup(popup, evt) {
 }
 
 writeUs.addEventListener("click", function(evt) {
-  openPopup(writePopup, evt);
-  username.focus();
+  openPopup(evt);
 });
 writeUs.addEventListener("keydown", function(evt) {
   if (evt.keyCode === ENTER_KEYCODE) {
-    openPopup(writePopup, evt);
-    username.focus();
+    openPopup(evt);
   }
 });
 btnClose.addEventListener("click", function(evt) {
@@ -44,11 +61,11 @@ window.addEventListener("keydown", function(evt) {
   }
 });
 map.addEventListener("click", function(evt) {
-  openPopup(mapPopup, evt);
+  openMapPopup(evt);
 });
 map.addEventListener("keydown", function(evt) {
   if (evt.keyCode === ENTER_KEYCODE) {
-    openPopup(mapPopup, evt);
+    openMapPopup(evt);
   }
 });
 mapClose.addEventListener("click", function(evt) {
@@ -69,6 +86,10 @@ popupForm.addEventListener("submit", function(evt) {
     writePopup.offsetWidth = writePopup.offsetWidth;
     writePopup.classList.add("popup-error");
   } else {
+    if (supportStorage) {
+      localStorage.setItem("email", email.value);
+      localStorage.setItem("username", username.value);
+    }
     if (writePopup.classList.contains("popup-error")) {
       writePopup.classList.remove("popup-error");
     }
