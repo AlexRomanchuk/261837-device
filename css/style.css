@@ -620,11 +620,14 @@ a.btn-device {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 30px;
-  margin-right: 5px;
+  margin-right: -5px;
 }
 .direction .icon-dir {
   margin-right: 10px;
+}
+.direction .icon-dir.down {
+  width: 10px;
+  margin-right: 0;
 }
 .sorts li {
   font-size: 14px;
@@ -936,7 +939,8 @@ input:disabled ~ .filter-checkbox, input:disabled ~ .filter-radio {
 .slide-description {
   display: none;
   position: relative;
-  top: 5px;
+  top: 4px;
+  left: -1px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: normal;
   font-size: 15px;
@@ -1722,7 +1726,7 @@ footer a {
   margin: 0px;
   margin-top: 5px;
   margin-left: 40px;
-  margin-right: -3px;
+  margin-right: -2px;
 }
 .footer-user li {
   margin-left: 42px;
@@ -1890,7 +1894,7 @@ address {
   display: -ms-flexbox;
   display: flex;
   margin-left: 12px;
-  margin-right: 11px;
+  margin-right: 10px;
 }
 .social-button a {
   opacity: 0.6;
