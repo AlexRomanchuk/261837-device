@@ -15,17 +15,18 @@ var supportStorage = true;
 
 try {
   storage = localStorage.getItem("username");
-} catch(e) {
+} catch (e) {
   supportStorage = false;
 }
 
 function openMapPopup(evt) {
   evt.preventDefault();
-	mapPopup.classList.add("popup-open");
+  mapPopup.classList.add("popup-open");
 }
+
 function openPopup(evt) {
   evt.preventDefault();
-	writePopup.classList.add("popup-open");
+  writePopup.classList.add("popup-open");
   if (storage) {
     username.value = localStorage.getItem("username");
     email.value = localStorage.getItem("email");
@@ -34,9 +35,10 @@ function openPopup(evt) {
     username.focus();
   }
 }
+
 function closePopup(popup, evt) {
   evt.preventDefault();
-	popup.classList.remove("popup-open");
+  popup.classList.remove("popup-open");
 }
 
 writeUs.addEventListener("click", function(evt) {
