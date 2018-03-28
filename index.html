@@ -28,6 +28,22 @@
       <nav class="main-navigation">
         <ul class="main-menu">
 		      <li class="catalog"><a href="menu.html">Каталог товаров</a></li>
+          <li class="dropdown">
+            <div class="catalog-menu">
+              <ul class="col-items">
+                <li class="catalog-item"><a href="catalog.html">Виртуальная реальность</a></li>
+                <li class="catalog-item"><a href="catalog.html">Моноподы для селфи</a></li>
+                <li class="catalog-item"><a href="catalog.html">Экшн-камеры</a></li>
+              </ul>
+              <ul class="col-items">
+                <li class="catalog-item"><a href="catalog.html">Фитнес-браслеты</a></li>
+                <li class="catalog-item"><a href="catalog.html">Умные часы</a></li>
+              </ul>
+              <ul class="col-items">
+                <li class="catalog-item"><a href="catalog.html">Квадрокоперы</a></li>
+              </ul>
+            </div>
+          </li>
 		      <li class="right-wrapper">
 		        <ul>
               <li><a href="#">Доставка</a></li>
@@ -35,20 +51,6 @@
               <li class="contacts"><a href="#">Контакты</a></li>
 			      </ul>
 	        </li>
-        </ul>
-      </nav>
-      <nav class="catalog-menu visually-hidden">
-        <ul class="col-items">
-          <li class="catalog-item"><a href="catalog.html">Виртуальная реальность</a></li>
-          <li class="catalog-item"><a href="catalog.html">Моноподы для селфи</a></li>
-          <li class="catalog-item"><a href="catalog.html">Экшн-камеры</a></li>
-        </ul>
-        <ul class="col-items">
-          <li class="catalog-item"><a href="catalog.html">Фитнес-браслеты</a></li>
-          <li class="catalog-item"><a href="catalog.html">Умные часы</a></li>
-        </ul>
-        <ul class="col-items">
-          <li class="catalog-item"><a href="catalog.html">Квадрокоперы</a></li>
         </ul>
       </nav>
       </div>
@@ -298,17 +300,17 @@
             </ul>
           </div>
           <a href="https://htmlacademy.ru/intensive/htmlcss" class="logo-html">
-            <img src="img/logo-html.svg" width="27.92" height="34.08" alt="">
+            <img src="img/logo-html.svg" width="28" height="34" alt="">
           </a>
         </div>
       </div>
     </footer>
     <section class="popup map-popup">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931638496!3d55.687030980535816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1522170413652" width="960" height="559" frameborder="0" allowfullscreen></iframe>
-      <button class="modal-close" type="button" aria-label="Закрыть">+</button>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931638496!3d55.687030980535816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1522170413652" width="960" height="559" allowfullscreen></iframe>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
     <section class="popup write-us">
-      <form method="POST" action="index.html">
+      <form method="POST" action="https://echo.htmlacademy.ru">
         <div class="input-wrapper">
           <div class="field">
             <label for="name">Ваше имя</label>
@@ -325,9 +327,8 @@
         </div>
         <button class="btn-device msg-submit" type="submit" aria-label="Отправить">Отправить</button>
       </form>
-      <button class="modal-close" type="button" aria-label="Закрыть">+</button>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
     <script src="js/popup.js"></script>
-    <script src="js/catalog.js"></script>
   </body>
 </html>

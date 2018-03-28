@@ -59,7 +59,7 @@ button.btn-device {
 .catalog {
   margin-left: -1px;
 }
-.catalog::after {
+.catalog a::after {
   position: relative;
   top: 1px;
   content: "";
@@ -265,7 +265,7 @@ button.btn-device {
   padding: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -273,6 +273,7 @@ button.btn-device {
   min-height: 150px;
   background-color: #f7e296;
   position: absolute;
+  left: 0;
   top: 150px;
   width: 1160px;
   z-index: 3;
@@ -397,22 +398,40 @@ input.search:hover ~ .placeholder {
 .user a:active, .catalog-menu a:active {
   color: rgba(0, 0, 0, 0.3);
 }
-.main-menu, .dropdown-menu {
+.main-menu {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bold;
   font-size: 18px;
 }
-.main-menu a, .dropdown-menu a {
+.main-menu a {
   text-decoration: none;
   color: #000000;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+}
+.catalog a {
+  position: absolute;
+  z-index: 4;
+  display: inline-block;
+  vertical-align: baseline;
+  height: 40px;
+}
+.catalog-menu a {
+  text-transform: none;
+  letter-spacing: 0;
+}
+.catalog:hover ~ .dropdown .catalog-menu, .catalog-menu:hover {
+  display: flex;
 }
 .main-menu a:hover, .catalog:hover {
   color: rgba(0, 0, 0, 0.6);
 }
 .main-menu a:active, .catalog:active {
   color: rgba(0, 0, 0, 0.3);
+}
+.main-menu .dropdown {
+  margin: 0;
+  width: 0px;
 }
 .user, .catalog-menu {
   font-family: "Open Sans", "Arial", sans-serif;
@@ -1843,8 +1862,8 @@ address {
 }
 .logo-footer::before {
   position: absolute;
-  top: 172px;
-  left: 0;
+  top: 171px;
+  left: 2px;
   content: "";
   display: block;
   width: 80px;
@@ -2003,15 +2022,36 @@ address {
   font-family: serif;
   font-size: 50px;
   border-radius: 50%;
+}
+.modal-close::before, .modal-close::after {
+  position: absolute;
+  content: "";
+  left: 14px;
+  top: 28px;
+  display: inline-block;
+  vertical-align: baseline;
+  width: 30px;
+  height: 2px;
+  background-color: #ffffff;
+}
+.modal-close::before {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+.modal-close::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .modal-close:hover {
   background-color: rgba(240, 197, 46, 1);
 }
 .modal-close:active {
   background-color: rgba(240, 197, 46, 0.3);
+}
+iframe {
+  border: none;
 }
 @-webkit-keyframes bounce {
   0% {
