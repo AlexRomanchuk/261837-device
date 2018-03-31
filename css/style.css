@@ -732,8 +732,6 @@ a.btn-device {
   padding: 0px;
   margin: 0px;
   margin-left: 6px;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
