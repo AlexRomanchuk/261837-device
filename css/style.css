@@ -720,6 +720,7 @@ a.btn-device {
   position: relative;
   left: 45px;
   min-width: 300px;
+  max-width: 550px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -735,7 +736,6 @@ a.btn-device {
   -ms-flex-pack: justify;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .direction {
